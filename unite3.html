@@ -508,6 +508,15 @@
 .zb-ikilem{ background:#eefcf3; border-left:6px solid #0f9d58; }
 .zb-ikilem .zb-baslik{ color:#0f7a44; }
 
+
+.kavram-harita-panel .kavram-harita-aciklama{ font-size:.9em; color:#555; margin-bottom:6px; }
+.kavram-harita{ display:flex; flex-direction:column; align-items:center; margin-top:18px; }
+.kh-merkez{ background:#7c3aed; color:#fff; font-weight:bold; padding:12px 22px; border-radius:30px; box-shadow:0 4px 10px rgba(124,58,237,.35); position:relative; margin-bottom:26px; text-align:center; max-width:80%; }
+.kh-merkez::after{ content:''; position:absolute; bottom:-22px; left:50%; width:2px; height:22px; background:#c4b5fd; }
+.kh-dallar{ display:flex; flex-wrap:wrap; justify-content:center; gap:20px 16px; }
+.kh-kavram{ background:#f3eefc; border:2px solid #c4b5fd; color:#5b21b6; font-weight:bold; padding:8px 16px; border-radius:20px; position:relative; }
+.kh-kavram::before{ content:''; position:absolute; top:-16px; left:50%; width:2px; height:16px; background:#c4b5fd; }
+
 </style>
 </head>
 <body>
@@ -810,6 +819,20 @@
       <li><b>DKAB.5.3.3</b> — Kur'an-ı Kerim'in ana konularını sınıflandırır.</li>
       <li><b>DKAB.5.3.4</b> — Kevser suresini okuyarak yorumlar.</li>
     </ul>
+  </div>
+
+  <div class="kutu-panel kavram-harita-panel">
+    <h3 style="color:#5b21b6">🗺️ Kavram Haritası</h3>
+    <p class="kavram-harita-aciklama">Bu ünitenin MEB öğretim programında belirlenen anahtar kavramları, ünite temasıyla bağlantılı olarak aşağıda gösterilmiştir.</p>
+    <div class="kavram-harita">
+      <div class="kh-merkez">Kur'an-ı Kerim</div>
+      <div class="kh-dallar">
+      <div class="kh-kavram">Ayet</div>
+      <div class="kh-kavram">Cüz</div>
+      <div class="kh-kavram">Kıssa</div>
+      <div class="kh-kavram">Sure</div>
+      </div>
+    </div>
   </div>
     <p><b>Kur'an'ın güzel isimleri:</b> Furkan (doğru ile yanlışı ayırt eden), Nur (yolu aydınlatan), Şifa (kalplere şifa veren), Zikir (yaratıcıyı hatırlatan), Kelam (Allah'ın sözü).</p>
     <p><b>Ayet</b>, Kur'an surelerini oluşturan harf, kelime veya cümlelerdir; <b>durak</b> denilen yuvarlak işaretlerle ayrılır. Mekke'de inen ayetlere <b>Mekki</b>, Medine'de inenlere <b>Medeni</b> ayet denir. <b>Sure</b>, ayetlerden oluşan bölümdür; ilk sure Fatiha, son sure Nâs'tır. En uzun sure Bakara (286 ayet), en kısa sure Kevser'dir (3 ayet). Kur'an-ı Kerim'de <b>114 sure</b>, <b>6236 ayet</b> vardır. <b>Cüz</b>, Kur'an'ın yirmi sayfadan oluşan her bir bölümüdür; toplam <b>30 cüz</b> vardır, başlangıcında <b>cüz gülü</b> bulunur.</p>
