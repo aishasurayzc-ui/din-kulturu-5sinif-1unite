@@ -359,6 +359,33 @@
   .sb-baslik{ font-size:1.25em; } .sa-meal{ font-size:1em; } .sl-liste li,.si-liste li{ font-size:.85em; }
 }
 
+
+/* ===================== ZENGINLESTIRME KUTULARI ===================== */
+.zg-kutu{ border-radius:12px; padding:16px 18px; margin:16px 0; box-shadow:0 3px 10px rgba(0,0,0,.08); }
+.zg-baslik{ font-weight:bold; font-size:1.05em; margin:0 0 8px; display:flex; align-items:center; gap:8px; }
+.zg-metin{ margin:0; line-height:1.55; font-size:.97em; }
+.zg-bilgi{ background:#eaf2ff; border-left:6px solid #2a6f97; }
+.zg-bilgi .zg-baslik{ color:#2a6f97; }
+.zg-merak{ background:#f3ecfb; border-left:6px solid #7c3aed; }
+.zg-merak .zg-baslik{ color:#7c3aed; }
+.zg-soru{ background:#fff4e6; border-left:6px solid #f4a261; }
+.zg-soru .zg-baslik{ color:#c9740b; }
+.zg-hayat{ background:#eafaf1; border-left:6px solid #40916c; }
+.zg-hayat .zg-baslik{ color:#40916c; }
+
+
+.s-zg{ color:#22333b; }
+.s-zg-bilgi{ background:#eaf2ff; }
+.s-zg-merak{ background:#f3ecfb; }
+.s-zg-soru{ background:#fff4e6; }
+.s-zg-hayat{ background:#eafaf1; }
+.zg-slayt-ust{ font-weight:bold; letter-spacing:1.5px; font-size:.95em; margin-bottom:14px; }
+.s-zg-bilgi .zg-slayt-ust{ color:#2a6f97; }
+.s-zg-merak .zg-slayt-ust{ color:#7c3aed; }
+.s-zg-soru .zg-slayt-ust{ color:#c9740b; }
+.s-zg-hayat .zg-slayt-ust{ color:#40916c; }
+.zg-slayt-metin{ font-size:1.15em; line-height:1.55; max-width:640px; }
+
 </style>
 </head>
 <body>
@@ -480,6 +507,11 @@
       <li>Dürüstlük, adalet, yardımseverlik, merhamet gibi ahlaki ilkeleri önce kendi hayatlarında uygulamışlardır.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-bilgi" data-tip="zg">
+    <p class="zg-slayt-ust">💡 BİLGİ KUTUSU</p>
+    <p class="zg-slayt-metin">Ülülazm peygamberler (Hz. Nuh, Hz. İbrahim, Hz. Musa, Hz. İsa, Hz. Muhammed), zorluklara karşı en büyük sabrı gösteren 5 peygamberdir.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
     <h3>📌 Kur'an-ı Kerim'den Öğütler: Peygamber Kıssaları (1/4)</h3>
@@ -487,6 +519,11 @@
       <li>Hz. Nuh: Kur'an'da ismi en çok geçen peygamberlerden biridir, adına bir sure vardır. Putlara tapan kavmini tevhide davet etmiştir.</li><li>Kavmi onu dinlememiş, Allah (cc) ona bir gemi yapmasını emretmiştir.</li><li>Tufan başlayınca iman edenler ve her hayvandan birer çift gemiye binmiş, sular çekilince gemi Cudi Dağı'na oturmuştur. Hz.</li><li>Nuh, insanlığın ikinci atası kabul edilir.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-merak" data-tip="zg">
+    <p class="zg-slayt-ust">🤔 MERAK ETTİN Mİ?</p>
+    <p class="zg-slayt-metin">Hz. Nuh'un gemisi tufandan sonra nereye oturmuştur? Kur'an'a göre Cudi Dağı'na.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
     <h3>📌 Kur'an-ı Kerim'den Öğütler: Peygamber Kıssaları (2/4)</h3>
@@ -501,6 +538,11 @@
       <li>İsmail'le birlikte Kâbe'yi yeniden inşa etmiştir.</li><li>Hz. Musa: Allah'ın kendisine Tevrat'ı indirdiği, İsrailoğullarına gönderilen peygamberdir.</li><li>Zalim kral Firavun'un zulmünden kaçarken Allah'ın emriyle asasını vurmuş, Kızıldeniz ikiye ayrılmış; Firavun ve ordusu boğulmuştur.</li><li>Kardeşi Hz. Harun da kendisine peygamber olarak yardım etmiştir.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-soru" data-tip="zg">
+    <p class="zg-slayt-ust">❓ GÜNÜN SORUSU</p>
+    <p class="zg-slayt-metin">Peygamber kıssalarından hangi ders senin hayatına en çok dokunuyor?</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
     <h3>📌 Kur'an-ı Kerim'den Öğütler: Peygamber Kıssaları (4/4)</h3>
@@ -508,6 +550,11 @@
       <li>Hz. İsa: Hz. Meryem'in oğludur, İsrailoğullarına gönderilmiştir. Allah kendisine İncil'i indirmiştir. Yaratılışı Hz.</li><li>Adem'in yaratılışına benzetilir. Kendisinden sonra Hz. Muhammed'in (sav) peygamber olacağını müjdelemiştir.</li><li>Peygamber kıssalarında ortak olarak tevhide davet, mucizeler, iyilik-kötülük ve sabırla mücadele konu edilir; geçmiş toplumların hataları hatırlatılır.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-hayat" data-tip="zg">
+    <p class="zg-slayt-ust">🌍 GERÇEK HAYAT BAĞLANTISI</p>
+    <p class="zg-slayt-metin">Hz. İbrahim'in doğru bildiğinden vazgeçmemesi gibi, biz de zor durumlarda doğru olanı savunma cesaretini gösterebiliriz.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--kirmizi)">
     <h3>📌 Bir Sure Öğreniyorum: Kureyş Suresi</h3>
@@ -556,7 +603,6 @@
       <li>Davet: Sözlükte çağırmak, seslenmek anlamına gelir.</li><li>İslam'a ve İslam esaslarının uygulanmasına çağırmak demektir.</li>
     </ul>
   </div>
-
   <div class="sunum-slayt s-kapanis" data-tip="kapanis">
     <div class="sb-daire">🌟</div>
     <h2 class="sb-baslik">Dinlediğiniz İçin Teşekkürler</h2>
@@ -583,6 +629,11 @@
     <p>Peygamberlerin görevleri sadece mesaj bildirmek değildir: aldıkları emirleri açıklamış, nasıl uygulanacağını göstermiş, iyi ve doğru olanı anlatmış, insanları kötülüklerden sakındırmış ve davranışlarıyla insanlara <b>örnek</b> olmuşlardır. Dürüstlük, adalet, yardımseverlik, merhamet gibi ahlaki ilkeleri önce kendi hayatlarında uygulamışlardır.</p>
     <div class="aciklama"><b>Davet:</b> Sözlükte çağırmak, seslenmek anlamına gelir. İslam'a ve İslam esaslarının uygulanmasına çağırmak demektir.</div>
   </div>
+  <div class="zg-kutu zg-bilgi">
+    <p class="zg-baslik">💡 Bilgi Kutusu</p>
+    <p class="zg-metin">Ülülazm peygamberler (Hz. Nuh, Hz. İbrahim, Hz. Musa, Hz. İsa, Hz. Muhammed), zorluklara karşı en büyük sabrı gösteren 5 peygamberdir.</p>
+  </div>
+
 
   <div class="kutu-panel">
     <h3 style="color:var(--mavi)">2️⃣ Kur'an-ı Kerim'den Öğütler: Peygamber Kıssaları</h3>
@@ -594,6 +645,15 @@
     <div class="aciklama"><b>Kavim:</b> Aralarında dil, kültür ve gelenek ortaklığı bulunan, aynı soydan gelen insan topluluğu. <b>Ümmet:</b> Bir peygamberin anlattığı dine inananlardan oluşan topluluk.</div>
     <p>Peygamber kıssalarında ortak olarak <b>tevhide davet</b>, <b>mucizeler</b>, iyilik-kötülük ve <b>sabırla mücadele</b> konu edilir; geçmiş toplumların hataları hatırlatılır.</p>
   </div>
+  <div class="zg-kutu zg-merak">
+    <p class="zg-baslik">🤔 Merak Ettin mi?</p>
+    <p class="zg-metin">Hz. Nuh'un gemisi tufandan sonra nereye oturmuştur? Kur'an'a göre Cudi Dağı'na.</p>
+  </div>
+  <div class="zg-kutu zg-soru">
+    <p class="zg-baslik">❓ Günün Sorusu</p>
+    <p class="zg-metin">Peygamber kıssalarından hangi ders senin hayatına en çok dokunuyor?</p>
+  </div>
+
 
   <div class="kutu-panel">
     <h3 style="color:var(--mavi)">3️⃣ Bir Sure Öğreniyorum: Kureyş Suresi</h3>
@@ -607,6 +667,11 @@
     </table>
     <div class="aciklama"><b>Kabile:</b> Aralarında kan bağı olan insanların oluşturduğu geniş aile.</div>
   </div>
+  <div class="zg-kutu zg-hayat">
+    <p class="zg-baslik">🌍 Gerçek Hayat Bağlantısı</p>
+    <p class="zg-metin">Hz. İbrahim'in doğru bildiğinden vazgeçmemesi gibi, biz de zor durumlarda doğru olanı savunma cesaretini gösterebiliriz.</p>
+  </div>
+
 </section>
 
 <!-- KONU TEKRARI TESTİ -->

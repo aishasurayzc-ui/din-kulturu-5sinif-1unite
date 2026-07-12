@@ -359,6 +359,33 @@
   .sb-baslik{ font-size:1.25em; } .sa-meal{ font-size:1em; } .sl-liste li,.si-liste li{ font-size:.85em; }
 }
 
+
+/* ===================== ZENGINLESTIRME KUTULARI ===================== */
+.zg-kutu{ border-radius:12px; padding:16px 18px; margin:16px 0; box-shadow:0 3px 10px rgba(0,0,0,.08); }
+.zg-baslik{ font-weight:bold; font-size:1.05em; margin:0 0 8px; display:flex; align-items:center; gap:8px; }
+.zg-metin{ margin:0; line-height:1.55; font-size:.97em; }
+.zg-bilgi{ background:#eaf2ff; border-left:6px solid #2a6f97; }
+.zg-bilgi .zg-baslik{ color:#2a6f97; }
+.zg-merak{ background:#f3ecfb; border-left:6px solid #7c3aed; }
+.zg-merak .zg-baslik{ color:#7c3aed; }
+.zg-soru{ background:#fff4e6; border-left:6px solid #f4a261; }
+.zg-soru .zg-baslik{ color:#c9740b; }
+.zg-hayat{ background:#eafaf1; border-left:6px solid #40916c; }
+.zg-hayat .zg-baslik{ color:#40916c; }
+
+
+.s-zg{ color:#22333b; }
+.s-zg-bilgi{ background:#eaf2ff; }
+.s-zg-merak{ background:#f3ecfb; }
+.s-zg-soru{ background:#fff4e6; }
+.s-zg-hayat{ background:#eafaf1; }
+.zg-slayt-ust{ font-weight:bold; letter-spacing:1.5px; font-size:.95em; margin-bottom:14px; }
+.s-zg-bilgi .zg-slayt-ust{ color:#2a6f97; }
+.s-zg-merak .zg-slayt-ust{ color:#7c3aed; }
+.s-zg-soru .zg-slayt-ust{ color:#c9740b; }
+.s-zg-hayat .zg-slayt-ust{ color:#40916c; }
+.zg-slayt-metin{ font-size:1.15em; line-height:1.55; max-width:640px; }
+
 </style>
 </head>
 <body>
@@ -480,6 +507,11 @@
       <li>Namaz Çeşitleri:</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-bilgi" data-tip="zg">
+    <p class="zg-slayt-ust">💡 BİLGİ KUTUSU</p>
+    <p class="zg-slayt-metin">Namazın farzları toplam 12 tanedir; 6'sı namaza başlamadan önceki hazırlık şartları, 6'sı namaz içindeki rükünlerdir.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
     <h3>📌 Namazın Kılınışı (1/3)</h3>
@@ -494,6 +526,11 @@
       <li>Gusül: Vücutta kuru yer kalmayacak şekilde tüm bedenin yıkanmasıdır (boy abdesti).</li><li>Namazın Kılınış Şartları (6): İftitah tekbiri ("Allahüekber" ile başlama), kıyam (ayakta durma), kıraat (Kur'an okuma), rükû (eğilme), secde (yere kapanma), ka'de-i ahire/son oturuş (Tahiyyat'ı okuyacak kadar oturma).</li><li>Cemaatle Namaz: Cuma ve bayram namazlarının camide cemaatle kılınması gerekir. Hz.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-merak" data-tip="zg">
+    <p class="zg-slayt-ust">🤔 MERAK ETTİN Mİ?</p>
+    <p class="zg-slayt-metin">Neden namazda kıbleye döneriz? Bu, tüm dünyadaki Müslümanların aynı yöne yönelerek birlik ve beraberlik duygusunu güçlendirmesi içindir.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
     <h3>📌 Namazın Kılınışı (3/3)</h3>
@@ -501,6 +538,11 @@
       <li>Muhammed (sav): "Cemaatle kılınan namaz, tek başına kılınan namazdan yirmi yedi kat daha faziletlidir." Cuma namazında imam minbere çıkıp hutbe okur.</li><li>Cenaze namazı rükû ve secde yapılmadan sadece kıyamda durularak kılınır.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-soru" data-tip="zg">
+    <p class="zg-slayt-ust">❓ GÜNÜN SORUSU</p>
+    <p class="zg-slayt-metin">Bugünkü namazlarından hangisini daha huzurlu kıldın? Neden?</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--kirmizi)">
     <h3>📌 Namaz İbadetinin İnsana Kazandırdıkları (1/2)</h3>
@@ -515,6 +557,11 @@
       <li>Camilerde bir araya gelen Müslümanlar arasında ırk, renk, dil ayrımı olmadan kardeşlik bilinci gelişir; yardımlaşma ve dayanışma artar.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-hayat" data-tip="zg">
+    <p class="zg-slayt-ust">🌍 GERÇEK HAYAT BAĞLANTISI</p>
+    <p class="zg-slayt-metin">Namaz vakitleri, günü düzenli bölümlere ayırır; bu da zaman yönetimi ve disiplin kazanmamıza yardımcı olur.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--turkuaz)">
     <h3>📌 Bir Dua Öğreniyorum: Tahiyyat Duası</h3>
@@ -563,7 +610,6 @@
       <li>Ayet: "...</li><li>Namazı dosdoğru kılın çünkü namaz müminler üzerine vakitleri belli bir farzdır." — Hadis-i Şerif: "Cennetin anahtarı namaz, namazın anahtarı ise abdesttir."</li>
     </ul>
   </div>
-
   <div class="sunum-slayt s-kapanis" data-tip="kapanis">
     <div class="sb-daire">🌟</div>
     <h2 class="sb-baslik">Dinlediğiniz İçin Teşekkürler</h2>
@@ -595,6 +641,11 @@
       <li><b>Nafile (sünnet) namazlar</b> — Farz namazların öncesi/sonrasında kılınanlar, teravih, teheccüt.</li>
     </ul>
   </div>
+  <div class="zg-kutu zg-bilgi">
+    <p class="zg-baslik">💡 Bilgi Kutusu</p>
+    <p class="zg-metin">Namazın farzları toplam 12 tanedir; 6'sı namaza başlamadan önceki hazırlık şartları, 6'sı namaz içindeki rükünlerdir.</p>
+  </div>
+
 
   <div class="kutu-panel">
     <h3 style="color:var(--mavi)">2️⃣ Namazın Kılınışı</h3>
@@ -605,12 +656,22 @@
     <div class="aciklama"><b>Rekât</b>, namazın kıyam, kıraat, rükû ve iki secdeden ibaret her bir bölümüdür. Rükûda 3 kez "Sübhane Rabbiye'l-azîm", secdede 3 kez "Sübhâne Rabbiye'l-a'lâ" denir.</div>
     <p><b>Cemaatle Namaz:</b> Cuma ve bayram namazlarının camide <b>cemaat</b>le kılınması gerekir. Hz. Muhammed (sav): "Cemaatle kılınan namaz, tek başına kılınan namazdan yirmi yedi kat daha faziletlidir." Cuma namazında imam <b>minber</b>e çıkıp <b>hutbe</b> okur. <b>Cenaze namazı</b> rükû ve secde yapılmadan sadece kıyamda durularak kılınır.</p>
   </div>
+  <div class="zg-kutu zg-merak">
+    <p class="zg-baslik">🤔 Merak Ettin mi?</p>
+    <p class="zg-metin">Neden namazda kıbleye döneriz? Bu, tüm dünyadaki Müslümanların aynı yöne yönelerek birlik ve beraberlik duygusunu güçlendirmesi içindir.</p>
+  </div>
+
 
   <div class="kutu-panel">
     <h3 style="color:var(--mavi)">3️⃣ Namaz İbadetinin İnsana Kazandırdıkları</h3>
     <p>Namaz, insanın kulluk bilincini canlı tutar, onu kötülüklerden uzaklaştırır. Abdest sayesinde insan hem manevi hem maddi olarak temizlenir. Kur'an-ı Kerim'de: "... namaz, hayâsızlıktan ve kötülükten alıkoyar..." buyrulur. Hz. Peygamber'e göre <b>secde</b>, kulun Allah'a en yakın olduğu andır.</p>
     <p>Camilerde bir araya gelen Müslümanlar arasında ırk, renk, dil ayrımı olmadan kardeşlik bilinci gelişir; yardımlaşma ve dayanışma artar.</p>
   </div>
+  <div class="zg-kutu zg-soru">
+    <p class="zg-baslik">❓ Günün Sorusu</p>
+    <p class="zg-metin">Bugünkü namazlarından hangisini daha huzurlu kıldın? Neden?</p>
+  </div>
+
 
   <div class="kutu-panel">
     <h3 style="color:var(--mavi)">4️⃣ Bir Dua Öğreniyorum: Tahiyyat Duası</h3>
@@ -623,6 +684,11 @@
       <tr><td style="padding:6px;">Eşhedü ellâ ilâhe illallâh ve eşhedü enne Muhammeden abdühû ve rasûlüh</td><td style="padding:6px;">Tanıklık ederim ki Allah'tan başka ilah yoktur. Yine tanıklık ederim ki Muhammed O'nun kulu ve elçisidir.</td></tr>
     </table>
   </div>
+  <div class="zg-kutu zg-hayat">
+    <p class="zg-baslik">🌍 Gerçek Hayat Bağlantısı</p>
+    <p class="zg-metin">Namaz vakitleri, günü düzenli bölümlere ayırır; bu da zaman yönetimi ve disiplin kazanmamıza yardımcı olur.</p>
+  </div>
+
 </section>
 
 <!-- KONU TEKRARI TESTİ -->

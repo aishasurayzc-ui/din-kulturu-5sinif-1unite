@@ -359,6 +359,33 @@
   .sb-baslik{ font-size:1.25em; } .sa-meal{ font-size:1em; } .sl-liste li,.si-liste li{ font-size:.85em; }
 }
 
+
+/* ===================== ZENGINLESTIRME KUTULARI ===================== */
+.zg-kutu{ border-radius:12px; padding:16px 18px; margin:16px 0; box-shadow:0 3px 10px rgba(0,0,0,.08); }
+.zg-baslik{ font-weight:bold; font-size:1.05em; margin:0 0 8px; display:flex; align-items:center; gap:8px; }
+.zg-metin{ margin:0; line-height:1.55; font-size:.97em; }
+.zg-bilgi{ background:#eaf2ff; border-left:6px solid #2a6f97; }
+.zg-bilgi .zg-baslik{ color:#2a6f97; }
+.zg-merak{ background:#f3ecfb; border-left:6px solid #7c3aed; }
+.zg-merak .zg-baslik{ color:#7c3aed; }
+.zg-soru{ background:#fff4e6; border-left:6px solid #f4a261; }
+.zg-soru .zg-baslik{ color:#c9740b; }
+.zg-hayat{ background:#eafaf1; border-left:6px solid #40916c; }
+.zg-hayat .zg-baslik{ color:#40916c; }
+
+
+.s-zg{ color:#22333b; }
+.s-zg-bilgi{ background:#eaf2ff; }
+.s-zg-merak{ background:#f3ecfb; }
+.s-zg-soru{ background:#fff4e6; }
+.s-zg-hayat{ background:#eafaf1; }
+.zg-slayt-ust{ font-weight:bold; letter-spacing:1.5px; font-size:.95em; margin-bottom:14px; }
+.s-zg-bilgi .zg-slayt-ust{ color:#2a6f97; }
+.s-zg-merak .zg-slayt-ust{ color:#7c3aed; }
+.s-zg-soru .zg-slayt-ust{ color:#c9740b; }
+.s-zg-hayat .zg-slayt-ust{ color:#40916c; }
+.zg-slayt-metin{ font-size:1.15em; line-height:1.55; max-width:640px; }
+
 </style>
 </head>
 <body>
@@ -480,6 +507,11 @@
       <li>Ayet, Kur'an surelerini oluşturan harf, kelime veya cümlelerdir; durak denilen yuvarlak işaretlerle ayrılır.</li><li>Mekke'de inen ayetlere Mekki, Medine'de inenlere Medeni ayet denir.</li><li>Sure, ayetlerden oluşan bölümdür; ilk sure Fatiha, son sure Nâs'tır. En uzun sure Bakara (286 ayet), en kısa sure Kevser'dir (3 ayet).</li><li>Kur'an-ı Kerim'de 114 sure, 6236 ayet vardır.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-bilgi" data-tip="zg">
+    <p class="zg-slayt-ust">💡 BİLGİ KUTUSU</p>
+    <p class="zg-slayt-metin">Kur'an-ı Kerim'in en uzun suresi Bakara (286 ayet), en kısa suresi ise Kevser'dir (3 ayet).</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--yesil)">
     <h3>📌 Kur'an-ı Kerim'in İç Düzeni (3/3)</h3>
@@ -487,6 +519,11 @@
       <li>Cüz, Kur'an'ın yirmi sayfadan oluşan her bir bölümüdür; toplam 30 cüz vardır, başlangıcında cüz gülü bulunur.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-merak" data-tip="zg">
+    <p class="zg-slayt-ust">🤔 MERAK ETTİN Mİ?</p>
+    <p class="zg-slayt-metin">Kur'an'daki ayetlerin sırası neden iniş sırasına göre değil? Çünkü Cebrail'in bildirdiği şekilde, Peygamberimiz tarafından belirlenmiştir; bu ilahi bir düzenlemedir.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
     <h3>📌 Kur'an-ı Kerim'in Temel Özellikleri</h3>
@@ -501,6 +538,11 @@
       <li>Kur'an-ı Kerim'in Ana Konuları</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-soru" data-tip="zg">
+    <p class="zg-slayt-ust">❓ GÜNÜN SORUSU</p>
+    <p class="zg-slayt-metin">Kur'an'da en çok hangi kıssayı merak ediyorsun?</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--turkuaz)">
     <h3>📌 Bir Sure Öğreniyorum: Kevser Suresi (1/2)</h3>
@@ -508,6 +550,11 @@
       <li>Kevser suresi, üç ayetten oluşur ve Kur'an-ı Kerim'in en kısa suresidir. "Kevser" kelimesi bolluk, bereket, maddi ve manevi çokluk anlamına gelir.</li><li>Cahiliye Dönemi'nde Hz. Muhammed'in (sav) oğlu Kasım'ın küçük yaşta vefatı üzerine müşrikler onu "ebter" (nesli kesik) diyerek üzdüler.</li><li>Bunun üzerine Yüce Allah, Kevser suresini indirdi; Hz. Peygamber'in soyu kızı Hz. Fatıma'nın çocukları Hz. Hasan ve Hz.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zg s-zg-hayat" data-tip="zg">
+    <p class="zg-slayt-ust">🌍 GERÇEK HAYAT BAĞLANTISI</p>
+    <p class="zg-slayt-metin">Kur'an'daki kıssalar, günümüz insanına da sabır, dürüstlük, adalet gibi değerleri öğretir — bunları kendi hayatımızda uygulayabiliriz.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--turkuaz)">
     <h3>📌 Bir Sure Öğreniyorum: Kevser Suresi (2/2)</h3>
@@ -556,7 +603,6 @@
       <li>Ayet: "Doğrusu kitabı biz indirdik, onun koruyucusu elbette biziz."</li>
     </ul>
   </div>
-
   <div class="sunum-slayt s-kapanis" data-tip="kapanis">
     <div class="sb-daire">🌟</div>
     <h2 class="sb-baslik">Dinlediğiniz İçin Teşekkürler</h2>
@@ -585,6 +631,11 @@
     <p><b>Ayet</b>, Kur'an surelerini oluşturan harf, kelime veya cümlelerdir; <b>durak</b> denilen yuvarlak işaretlerle ayrılır. Mekke'de inen ayetlere <b>Mekki</b>, Medine'de inenlere <b>Medeni</b> ayet denir. <b>Sure</b>, ayetlerden oluşan bölümdür; ilk sure Fatiha, son sure Nâs'tır. En uzun sure Bakara (286 ayet), en kısa sure Kevser'dir (3 ayet). Kur'an-ı Kerim'de <b>114 sure</b>, <b>6236 ayet</b> vardır. <b>Cüz</b>, Kur'an'ın yirmi sayfadan oluşan her bir bölümüdür; toplam <b>30 cüz</b> vardır, başlangıcında <b>cüz gülü</b> bulunur.</p>
     <div class="aciklama"><b>Hafız</b>, Kur'an-ı Kerim'i baştan sona ezberleyen kişidir. <b>Hatim</b>, Kur'an-ı Kerim'i baştan sonuna kadar okumaktır.</div>
   </div>
+  <div class="zg-kutu zg-bilgi">
+    <p class="zg-baslik">💡 Bilgi Kutusu</p>
+    <p class="zg-metin">Kur'an-ı Kerim'in en uzun suresi Bakara (286 ayet), en kısa suresi ise Kevser'dir (3 ayet).</p>
+  </div>
+
 
   <div class="kutu-panel">
     <h3 style="color:var(--mavi)">2️⃣ Kur'an-ı Kerim'in Temel Özellikleri</h3>
@@ -596,6 +647,11 @@
       <li><b>İnsanları düşünmeye ve aklını kullanmaya yöneltir</b> — Pek çok ayette "Ey akıl sahipleri!" diye seslenilir.</li>
     </ul>
   </div>
+  <div class="zg-kutu zg-merak">
+    <p class="zg-baslik">🤔 Merak Ettin mi?</p>
+    <p class="zg-metin">Kur'an'daki ayetlerin sırası neden iniş sırasına göre değil? Çünkü Cebrail'in bildirdiği şekilde, Peygamberimiz tarafından belirlenmiştir; bu ilahi bir düzenlemedir.</p>
+  </div>
+
 
   <div class="kutu-panel">
     <h3 style="color:var(--mavi)">3️⃣ Kur'an-ı Kerim'in Ana Konuları</h3>
@@ -607,6 +663,11 @@
       <li><b>Kıssa</b> — Geçmiş peygamberler ve kavimlerle ilgili ibret verici olaylar. "Andolsun ki, onların kıssalarında akıl sahipleri için ibret vardır..."</li>
     </ul>
   </div>
+  <div class="zg-kutu zg-soru">
+    <p class="zg-baslik">❓ Günün Sorusu</p>
+    <p class="zg-metin">Kur'an'da en çok hangi kıssayı merak ediyorsun?</p>
+  </div>
+
 
   <div class="kutu-panel">
     <h3 style="color:var(--mavi)">4️⃣ Bir Sure Öğreniyorum: Kevser Suresi</h3>
@@ -618,6 +679,11 @@
       <tr><td style="padding:6px;">İnne şânieke hüvel ebter</td><td style="padding:6px;">Asıl soyu gelmeyecek olan, sana karşı nefret duyandır.</td></tr>
     </table>
   </div>
+  <div class="zg-kutu zg-hayat">
+    <p class="zg-baslik">🌍 Gerçek Hayat Bağlantısı</p>
+    <p class="zg-metin">Kur'an'daki kıssalar, günümüz insanına da sabır, dürüstlük, adalet gibi değerleri öğretir — bunları kendi hayatımızda uygulayabiliriz.</p>
+  </div>
+
 </section>
 
 <!-- KONU TEKRARI TESTİ -->
