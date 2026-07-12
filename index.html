@@ -437,6 +437,51 @@
 .ozel-toast{ position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:#22333b; color:#fff; padding:14px 22px; border-radius:24px; box-shadow:0 6px 20px rgba(0,0,0,.3); z-index:1000; animation:ozelToastGir .3s ease; font-weight:bold; max-width:80vw; text-align:center; }
 @keyframes ozelToastGir{ from{opacity:0; transform:translateX(-50%) translateY(20px);} to{opacity:1; transform:translateX(-50%) translateY(0);} }
 
+
+/* ===================== 6 BOLUMLU ZENGINLESTIRME (Konu Ozeti) ===================== */
+.zb-kutu{ border-radius:12px; padding:16px 18px; margin:16px 0; box-shadow:0 3px 10px rgba(0,0,0,.08); }
+.zb-baslik{ font-weight:bold; font-size:1.05em; margin:0 0 8px; display:flex; align-items:center; gap:8px; }
+.zb-metin{ margin:0; line-height:1.55; font-size:.97em; }
+.zb-merak{ background:#f3ecfb; border-left:6px solid #7c3aed; }
+.zb-merak .zb-baslik{ color:#7c3aed; }
+.zb-yanlis{ background:#fff0f0; border-left:6px solid #d62828; }
+.zb-yanlis .zb-baslik{ color:#d62828; }
+.zb-yanlis .zb-yanlis-satir{ color:#a31515; margin:4px 0; }
+.zb-yanlis .zb-dogru-satir{ color:#2d6a4f; margin:4px 0; font-weight:bold; }
+.zb-ornek{ background:#eafaf1; border-left:6px solid #40916c; }
+.zb-ornek .zb-baslik{ color:#40916c; }
+.zb-dusun{ background:#fff4e6; border-left:6px solid #f4a261; }
+.zb-dusun .zb-baslik{ color:#c9740b; }
+.zb-aile{ background:#fdeef5; border-left:6px solid #d6336c; }
+.zb-aile .zb-baslik{ color:#d6336c; }
+.zb-degerlendir{ background:#eaf2ff; border-left:6px solid #2a6f97; }
+.zb-degerlendir .zb-baslik{ color:#2a6f97; }
+.zb-degerlendir ul{ list-style:none; padding:0; margin:0; }
+.zb-degerlendir li{ display:flex; align-items:flex-start; gap:8px; margin:8px 0; font-size:.95em; line-height:1.4; }
+.zb-degerlendir input[type=checkbox]{ width:18px; height:18px; margin-top:2px; flex-shrink:0; accent-color:#2a6f97; cursor:pointer; }
+.zb-degerlendir label{ cursor:pointer; }
+
+/* ===================== 6 BOLUMLU ZENGINLESTIRME (Sunum slaytlari) ===================== */
+.s-zb{ color:#22333b; }
+.s-zb-merak{ background:#f3ecfb; }
+.s-zb-yanlis{ background:#fff0f0; }
+.s-zb-ornek{ background:#eafaf1; }
+.s-zb-dusun{ background:#fff4e6; }
+.s-zb-aile{ background:#fdeef5; }
+.s-zb-degerlendir{ background:#eaf2ff; }
+.zb-slayt-ust{ font-weight:bold; letter-spacing:1.5px; font-size:.95em; margin-bottom:14px; }
+.s-zb-merak .zb-slayt-ust{ color:#7c3aed; }
+.s-zb-yanlis .zb-slayt-ust{ color:#d62828; }
+.s-zb-ornek .zb-slayt-ust{ color:#40916c; }
+.s-zb-dusun .zb-slayt-ust{ color:#c9740b; }
+.s-zb-aile .zb-slayt-ust{ color:#d6336c; }
+.s-zb-degerlendir .zb-slayt-ust{ color:#2a6f97; }
+.zb-slayt-metin{ font-size:1.1em; line-height:1.5; max-width:640px; }
+.zb-slayt-yanlis{ color:#a31515; font-size:1em; margin:6px 0; }
+.zb-slayt-dogru{ color:#2d6a4f; font-size:1em; margin:6px 0; font-weight:bold; }
+.zb-slayt-liste{ list-style:none; padding:0; margin:0; text-align:left; max-width:600px; }
+.zb-slayt-liste li{ font-size:1em; margin:8px 0; }
+
 </style>
 </head>
 <body>
@@ -572,6 +617,11 @@
       <li>Evren, üzerinde yaşadığımız dünya ile tüm yıldız ve gezegenleri içine alan varlıklar bütünüdür; buna kâinat da denir.</li><li>İnsan, akıl sahibi olması yönüyle diğer canlılardan ayrılır; çevresini gözlemler, düşünür ve sorgular.</li><li>İnsan vücudunun ölçülü ve dengeli yapısı, evrendeki düzenin ipuçlarını içerir.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zb s-zb-merak" data-tip="zb">
+    <p class="zb-slayt-ust">🤔 MERAK ETTİN Mİ?</p>
+    <p class="zb-slayt-metin">Esmaülhüsna, Allah'ın 99 güzel ismidir; her biri O'nun farklı bir özelliğini anlatır.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--yesil)">
     <h3>📌 Evrendeki Mükemmel Düzen (2/2)</h3>
@@ -579,10 +629,12 @@
       <li>Göz, kulak, burun gibi uzuvlar insanın ihtiyaçlarına göre yaratılmıştır.</li><li>Kışın yağan kar toprağı korur ve yer altı sularını artırır; yazın artan sıcaklık ekinlerin olgunlaşmasını sağlar.</li><li>Bunların hiçbiri tesadüf değildir; her şey mükemmel bir düzen içinde gerçekleşir.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-bilgi" data-tip="zg">
-    <p class="zg-slayt-ust">💡 BİLGİ KUTUSU</p>
-    <p class="zg-slayt-metin">Esmaülhüsna, Allah'ın 99 güzel ismidir; her biri O'nun farklı bir özelliğini anlatır ve Müslümanlar bu isimleri anarak dua eder.</p>
+  <div class="sunum-slayt s-zb s-zb-yanlis" data-tip="zb">
+    <p class="zb-slayt-ust">❌ YANLIŞ BİLİNENLER</p>
+    <p class="zb-slayt-yanlis">❌ Bazıları Allah'ın varlığının sadece dini kitaplarda yazdığı için kabul edildiğini düşünür.</p>
+    <p class="zb-slayt-dogru">✅ Evrendeki kusursuz düzen (gezegenlerin yörüngeleri, canlıların uyumu) akıl yoluyla da Allah'ın varlığına işaret eder.</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
@@ -591,10 +643,11 @@
       <li>Hiçbir varlık kendi kendine ya da tesadüfen var olamaz.</li><li>Her kitabın bir yazarı, her tablonun bir ressamı olduğu gibi, kâinattaki mükemmel düzenin de bir yaratıcısı vardır: Allah (cc).</li><li>Allah'ın (cc) bir ve tek olduğuna, eşi ve benzerinin olmadığına inanmak, O'na hiçbir şeyi ortak koşmadan ibadeti yalnızca Allah için yapmaya tevhit denir.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-merak" data-tip="zg">
-    <p class="zg-slayt-ust">🤔 MERAK ETTİN Mİ?</p>
-    <p class="zg-slayt-metin">Neden evrende her şey bir düzen içindedir? Gezegenlerin yörüngeleri, mevsimlerin dönüşü, bitkilerin büyümesi — hepsi Allah'ın koyduğu kusursuz düzenin kanıtıdır.</p>
+  <div class="sunum-slayt s-zb s-zb-ornek" data-tip="zb">
+    <p class="zb-slayt-ust">🌍 GERÇEK HAYATTAN BİR ÖRNEK</p>
+    <p class="zb-slayt-metin">Bir çiçeğin tohumdan filizlenip belirli bir düzende büyümesi, Allah'ın Alim ve Kadir isimlerinin günlük hayatta gözlemlenebilen bir yansımasıdır.</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
@@ -603,10 +656,11 @@
       <li>Tevhit, İslam'ın temel inanç esaslarından biri ve dinin özüdür.</li><li>Allah'a inanmakla birlikte başka varlıkları da tanrı kabul etmeye ise şirk denir.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-soru" data-tip="zg">
-    <p class="zg-slayt-ust">❓ GÜNÜN SORUSU</p>
-    <p class="zg-slayt-metin">Bugün etrafında gördüğün hangi güzellik sana Allah'ın varlığını hatırlattı?</p>
+  <div class="sunum-slayt s-zb s-zb-dusun" data-tip="zb">
+    <p class="zb-slayt-ust">💭 DÜŞÜN VE CEVAPLA</p>
+    <p class="zb-slayt-metin">Evrende gördüğün hangi düzen sana Allah'ın varlığını en çok hatırlatıyor?</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--kirmizi)">
@@ -615,10 +669,11 @@
       <li>Esmaülhüsna, Arapçada "en güzel isimler" anlamına gelir; Allah'ın (cc) gücünü, mükemmelliğini ve benzersizliğini anlatan isimleridir.</li><li>Günlük hayatta sıkça kullandığımız "Bismillâhirrahmânirrahîm" (besmele) ifadesinde Rahman ve Rahîm isimleri birlikte yer alır.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-hayat" data-tip="zg">
-    <p class="zg-slayt-ust">🌍 GERÇEK HAYAT BAĞLANTISI</p>
-    <p class="zg-slayt-metin">Bir çiçeğin açması, bir kuşun yuva yapması gibi doğadaki her ayrıntı, Allah'ın Alim ve Kadir isimlerinin bir yansımasıdır.</p>
+  <div class="sunum-slayt s-zb s-zb-aile" data-tip="zb">
+    <p class="zb-slayt-ust">👨‍👩‍👧 AİLEMLE YAPIYORUM</p>
+    <p class="zb-slayt-metin">Ailenle birlikte bir akşam gökyüzünü izleyin ve yıldızların/gezegenlerin düzenindeki mükemmelliği konuşun.</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--turkuaz)">
@@ -627,6 +682,16 @@
       <li>İhlas suresi, Kur'an-ı Kerim'in kısa surelerinden biridir ve 4 ayettir. "İhlas" kelimesi sözlükte "samimiyet, doğruluk, temizlik ve saflık" anlamına gelir.</li><li>Surede Allah'ın (cc) güzel isimlerinden Ehad (bir ve tek olması) ve Samed (hiçbir şeye muhtaç olmaması) yer alır.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zb s-zb-degerlendir" data-tip="zb">
+    <p class="zb-slayt-ust">✅ KENDİMİ DEĞERLENDİRİYORUM</p>
+    <ul class="zb-slayt-liste">
+      <li>☐ Allah'ın varlığının delillerini örneklerle açıklayabilirim.</li>
+      <li>☐ Esmaülhüsna kavramını biliyorum.</li>
+      <li>☐ Tevhit ve şirk kavramlarının farkını söyleyebilirim.</li>
+      <li>☐ Allah'ın verdiği nimetlere şükretmeye özen gösteriyorum.</li>
+    </ul>
+  </div>
+
 
   <div class="sunum-slayt s-kavram" data-tip="kavram">
     <h3>🔑 Önemli Kavramlar</h3>
@@ -686,10 +751,11 @@
     <p><b>Evren</b>, üzerinde yaşadığımız dünya ile tüm yıldız ve gezegenleri içine alan varlıklar bütünüdür; buna <b>kâinat</b> da denir. İnsan, akıl sahibi olması yönüyle diğer canlılardan ayrılır; çevresini gözlemler, düşünür ve sorgular.</p>
     <p>İnsan vücudunun ölçülü ve dengeli yapısı, evrendeki düzenin ipuçlarını içerir. Göz, kulak, burun gibi uzuvlar insanın ihtiyaçlarına göre yaratılmıştır. Kışın yağan kar toprağı korur ve yer altı sularını artırır; yazın artan sıcaklık ekinlerin olgunlaşmasını sağlar. Bunların hiçbiri tesadüf değildir; her şey mükemmel bir düzen içinde gerçekleşir.</p>
   </div>
-  <div class="zg-kutu zg-bilgi">
-    <p class="zg-baslik">💡 Bilgi Kutusu</p>
-    <p class="zg-metin">Esmaülhüsna, Allah'ın 99 güzel ismidir; her biri O'nun farklı bir özelliğini anlatır ve Müslümanlar bu isimleri anarak dua eder.</p>
+  <div class="zb-kutu zb-merak">
+    <p class="zb-baslik">🤔 Merak Ettin mi?</p>
+    <p class="zb-metin">Esmaülhüsna, Allah'ın 99 güzel ismidir; her biri O'nun farklı bir özelliğini anlatır.</p>
   </div>
+
 
 
   <div class="kutu-panel">
@@ -699,10 +765,16 @@
     <p>Allah'ın (cc) bir ve tek olduğuna, eşi ve benzerinin olmadığına inanmak, O'na hiçbir şeyi ortak koşmadan ibadeti yalnızca Allah için yapmaya <b>tevhit</b> denir. Tevhit, İslam'ın temel inanç esaslarından biri ve dinin özüdür. Allah'a inanmakla birlikte başka varlıkları da tanrı kabul etmeye ise <b>şirk</b> denir.</p>
     <div class="aciklama"><b>Ayet:</b> "Eğer yerde ve gökte Allah'tan başka ilahlar olsaydı kesinlikle ikisinin de düzeni bozulurdu..." (Enbiya suresi, 22. ayet) — "Gerçekten biz, her şeyi bir ölçü ve dengede yarattık." (Kamer suresi, 49. ayet)</div>
   </div>
-  <div class="zg-kutu zg-merak">
-    <p class="zg-baslik">🤔 Merak Ettin mi?</p>
-    <p class="zg-metin">Neden evrende her şey bir düzen içindedir? Gezegenlerin yörüngeleri, mevsimlerin dönüşü, bitkilerin büyümesi — hepsi Allah'ın koyduğu kusursuz düzenin kanıtıdır.</p>
+  <div class="zb-kutu zb-yanlis">
+    <p class="zb-baslik">❌ Yanlış Bilinenler</p>
+    <p class="zb-metin zb-yanlis-satir">❌ Bazıları Allah'ın varlığının sadece dini kitaplarda yazdığı için kabul edildiğini düşünür.</p>
+    <p class="zb-metin zb-dogru-satir">✅ Evrendeki kusursuz düzen (gezegenlerin yörüngeleri, canlıların uyumu) akıl yoluyla da Allah'ın varlığına işaret eder.</p>
   </div>
+  <div class="zb-kutu zb-ornek">
+    <p class="zb-baslik">🌍 Gerçek Hayattan Bir Örnek</p>
+    <p class="zb-metin">Bir çiçeğin tohumdan filizlenip belirli bir düzende büyümesi, Allah'ın Alim ve Kadir isimlerinin günlük hayatta gözlemlenebilen bir yansımasıdır.</p>
+  </div>
+
 
 
   <div class="kutu-panel">
@@ -719,10 +791,15 @@
     <div class="aciklama"><b>Hadis-i Şerif:</b> Peygamberimiz (sav), kaybolan çocuğunu telaşla arayan ve bulduğunda bağrına basan bir anneyi örnek vererek, "Allah'ın kullarına merhameti bu annenin yavrusuna duyduğundan çok daha fazladır." buyurmuştur.</div>
     <p>Günlük hayatta sıkça kullandığımız <b>"Bismillâhirrahmânirrahîm"</b> (besmele) ifadesinde Rahman ve Rahîm isimleri birlikte yer alır.</p>
   </div>
-  <div class="zg-kutu zg-soru">
-    <p class="zg-baslik">❓ Günün Sorusu</p>
-    <p class="zg-metin">Bugün etrafında gördüğün hangi güzellik sana Allah'ın varlığını hatırlattı?</p>
+  <div class="zb-kutu zb-dusun">
+    <p class="zb-baslik">💭 Düşün ve Cevapla</p>
+    <p class="zb-metin">Evrende gördüğün hangi düzen sana Allah'ın varlığını en çok hatırlatıyor?</p>
   </div>
+  <div class="zb-kutu zb-aile">
+    <p class="zb-baslik">👨‍👩‍👧 Ailemle Yapıyorum</p>
+    <p class="zb-metin">Ailenle birlikte bir akşam gökyüzünü izleyin ve yıldızların/gezegenlerin düzenindeki mükemmelliği konuşun.</p>
+  </div>
+
 
 
   <div class="kutu-panel">
@@ -737,10 +814,16 @@
       <tr><td style="padding:6px;">Ve lem yeküllehû küfüven ehad</td><td style="padding:6px;">O'nun hiçbir dengi (eşi, benzeri) yoktur.</td></tr>
     </table>
   </div>
-  <div class="zg-kutu zg-hayat">
-    <p class="zg-baslik">🌍 Gerçek Hayat Bağlantısı</p>
-    <p class="zg-metin">Bir çiçeğin açması, bir kuşun yuva yapması gibi doğadaki her ayrıntı, Allah'ın Alim ve Kadir isimlerinin bir yansımasıdır.</p>
+  <div class="zb-kutu zb-degerlendir">
+    <p class="zb-baslik">✅ Kendimi Değerlendiriyorum</p>
+    <ul>
+      <li><input type="checkbox" id="deg_5-1_0" onchange="degKaydet('5-1')"><label for="deg_5-1_0">Allah'ın varlığının delillerini örneklerle açıklayabilirim.</label></li>
+      <li><input type="checkbox" id="deg_5-1_1" onchange="degKaydet('5-1')"><label for="deg_5-1_1">Esmaülhüsna kavramını biliyorum.</label></li>
+      <li><input type="checkbox" id="deg_5-1_2" onchange="degKaydet('5-1')"><label for="deg_5-1_2">Tevhit ve şirk kavramlarının farkını söyleyebilirim.</label></li>
+      <li><input type="checkbox" id="deg_5-1_3" onchange="degKaydet('5-1')"><label for="deg_5-1_3">Allah'ın verdiği nimetlere şükretmeye özen gösteriyorum.</label></li>
+    </ul>
   </div>
+
 
 </section>
 
@@ -3186,6 +3269,27 @@ function ozelOnay(mesaj, callback){
   btnler[0].onclick = ()=>{ arka.remove(); callback(true); };
   btnler[1].onclick = ()=>{ arka.remove(); callback(false); };
 }
+
+
+// ===================== KENDIMI DEGERLENDIRIYORUM - CHECKBOX KAYDI =====================
+function degOku(uniteKimlik){
+  try{ return JSON.parse(localStorage.getItem('dkabDegerlendirme_'+uniteKimlik)) || {}; }catch(e){ return {}; }
+}
+function degKaydet(uniteKimlik){
+  const durum = {};
+  document.querySelectorAll('[id^="deg_'+uniteKimlik+'_"]').forEach(cb=>{ durum[cb.id] = cb.checked; });
+  try{ localStorage.setItem('dkabDegerlendirme_'+uniteKimlik, JSON.stringify(durum)); }catch(e){}
+}
+function degYukle(uniteKimlik){
+  const durum = degOku(uniteKimlik);
+  Object.keys(durum).forEach(id=>{
+    const cb = document.getElementById(id);
+    if(cb) cb.checked = durum[id];
+  });
+}
+document.addEventListener('DOMContentLoaded', function(){
+  if(typeof UNITE_KIMLIK !== 'undefined') degYukle(UNITE_KIMLIK);
+});
 
 </script>
 </body>

@@ -437,6 +437,51 @@
 .ozel-toast{ position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:#22333b; color:#fff; padding:14px 22px; border-radius:24px; box-shadow:0 6px 20px rgba(0,0,0,.3); z-index:1000; animation:ozelToastGir .3s ease; font-weight:bold; max-width:80vw; text-align:center; }
 @keyframes ozelToastGir{ from{opacity:0; transform:translateX(-50%) translateY(20px);} to{opacity:1; transform:translateX(-50%) translateY(0);} }
 
+
+/* ===================== 6 BOLUMLU ZENGINLESTIRME (Konu Ozeti) ===================== */
+.zb-kutu{ border-radius:12px; padding:16px 18px; margin:16px 0; box-shadow:0 3px 10px rgba(0,0,0,.08); }
+.zb-baslik{ font-weight:bold; font-size:1.05em; margin:0 0 8px; display:flex; align-items:center; gap:8px; }
+.zb-metin{ margin:0; line-height:1.55; font-size:.97em; }
+.zb-merak{ background:#f3ecfb; border-left:6px solid #7c3aed; }
+.zb-merak .zb-baslik{ color:#7c3aed; }
+.zb-yanlis{ background:#fff0f0; border-left:6px solid #d62828; }
+.zb-yanlis .zb-baslik{ color:#d62828; }
+.zb-yanlis .zb-yanlis-satir{ color:#a31515; margin:4px 0; }
+.zb-yanlis .zb-dogru-satir{ color:#2d6a4f; margin:4px 0; font-weight:bold; }
+.zb-ornek{ background:#eafaf1; border-left:6px solid #40916c; }
+.zb-ornek .zb-baslik{ color:#40916c; }
+.zb-dusun{ background:#fff4e6; border-left:6px solid #f4a261; }
+.zb-dusun .zb-baslik{ color:#c9740b; }
+.zb-aile{ background:#fdeef5; border-left:6px solid #d6336c; }
+.zb-aile .zb-baslik{ color:#d6336c; }
+.zb-degerlendir{ background:#eaf2ff; border-left:6px solid #2a6f97; }
+.zb-degerlendir .zb-baslik{ color:#2a6f97; }
+.zb-degerlendir ul{ list-style:none; padding:0; margin:0; }
+.zb-degerlendir li{ display:flex; align-items:flex-start; gap:8px; margin:8px 0; font-size:.95em; line-height:1.4; }
+.zb-degerlendir input[type=checkbox]{ width:18px; height:18px; margin-top:2px; flex-shrink:0; accent-color:#2a6f97; cursor:pointer; }
+.zb-degerlendir label{ cursor:pointer; }
+
+/* ===================== 6 BOLUMLU ZENGINLESTIRME (Sunum slaytlari) ===================== */
+.s-zb{ color:#22333b; }
+.s-zb-merak{ background:#f3ecfb; }
+.s-zb-yanlis{ background:#fff0f0; }
+.s-zb-ornek{ background:#eafaf1; }
+.s-zb-dusun{ background:#fff4e6; }
+.s-zb-aile{ background:#fdeef5; }
+.s-zb-degerlendir{ background:#eaf2ff; }
+.zb-slayt-ust{ font-weight:bold; letter-spacing:1.5px; font-size:.95em; margin-bottom:14px; }
+.s-zb-merak .zb-slayt-ust{ color:#7c3aed; }
+.s-zb-yanlis .zb-slayt-ust{ color:#d62828; }
+.s-zb-ornek .zb-slayt-ust{ color:#40916c; }
+.s-zb-dusun .zb-slayt-ust{ color:#c9740b; }
+.s-zb-aile .zb-slayt-ust{ color:#d6336c; }
+.s-zb-degerlendir .zb-slayt-ust{ color:#2a6f97; }
+.zb-slayt-metin{ font-size:1.1em; line-height:1.5; max-width:640px; }
+.zb-slayt-yanlis{ color:#a31515; font-size:1em; margin:6px 0; }
+.zb-slayt-dogru{ color:#2d6a4f; font-size:1em; margin:6px 0; font-weight:bold; }
+.zb-slayt-liste{ list-style:none; padding:0; margin:0; text-align:left; max-width:600px; }
+.zb-slayt-liste li{ font-size:1em; margin:8px 0; }
+
 </style>
 </head>
 <body>
@@ -579,10 +624,11 @@
       <li>Ayet, Kur'an surelerini oluşturan harf, kelime veya cümlelerdir; durak denilen yuvarlak işaretlerle ayrılır.</li><li>Mekke'de inen ayetlere Mekki, Medine'de inenlere Medeni ayet denir.</li><li>Sure, ayetlerden oluşan bölümdür; ilk sure Fatiha, son sure Nâs'tır. En uzun sure Bakara (286 ayet), en kısa sure Kevser'dir (3 ayet).</li><li>Kur'an-ı Kerim'de 114 sure, 6236 ayet vardır.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-bilgi" data-tip="zg">
-    <p class="zg-slayt-ust">💡 BİLGİ KUTUSU</p>
-    <p class="zg-slayt-metin">Kur'an-ı Kerim'in en uzun suresi Bakara (286 ayet), en kısa suresi ise Kevser'dir (3 ayet).</p>
+  <div class="sunum-slayt s-zb s-zb-merak" data-tip="zb">
+    <p class="zb-slayt-ust">🤔 MERAK ETTİN Mİ?</p>
+    <p class="zb-slayt-metin">Kur'an'ın en uzun suresi Bakara (286 ayet), en kısa suresi Kevser'dir (3 ayet).</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--yesil)">
@@ -591,10 +637,12 @@
       <li>Cüz, Kur'an'ın yirmi sayfadan oluşan her bir bölümüdür; toplam 30 cüz vardır, başlangıcında cüz gülü bulunur.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-merak" data-tip="zg">
-    <p class="zg-slayt-ust">🤔 MERAK ETTİN Mİ?</p>
-    <p class="zg-slayt-metin">Kur'an'daki ayetlerin sırası neden iniş sırasına göre değil? Çünkü Cebrail'in bildirdiği şekilde, Peygamberimiz tarafından belirlenmiştir; bu ilahi bir düzenlemedir.</p>
+  <div class="sunum-slayt s-zb s-zb-yanlis" data-tip="zb">
+    <p class="zb-slayt-ust">❌ YANLIŞ BİLİNENLER</p>
+    <p class="zb-slayt-yanlis">❌ Bazıları Kur'an'daki ayetlerin iniş sırasına göre dizildiğini sanır.</p>
+    <p class="zb-slayt-dogru">✅ Kur'an'daki sure/ayet sıralaması iniş sırasına göre değil, Cebrail'in bildirdiği şekilde Peygamberimiz tarafından belirlenen ilahi bir düzenlemedir.</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
@@ -603,6 +651,11 @@
       <li>Kur'an-ı Kerim'in Temel Özellikleri</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zb s-zb-ornek" data-tip="zb">
+    <p class="zb-slayt-ust">🌍 GERÇEK HAYATTAN BİR ÖRNEK</p>
+    <p class="zb-slayt-metin">Kur'an kursunda bir öğrencinin hatim yapması (baştan sona okuması), Kur'an'la kurulan derin bir bağın somut göstergesidir.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--kirmizi)">
     <h3>📌 Kur'an-ı Kerim'in Ana Konuları</h3>
@@ -610,10 +663,11 @@
       <li>Kur'an-ı Kerim'in Ana Konuları</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-soru" data-tip="zg">
-    <p class="zg-slayt-ust">❓ GÜNÜN SORUSU</p>
-    <p class="zg-slayt-metin">Kur'an'da en çok hangi kıssayı merak ediyorsun?</p>
+  <div class="sunum-slayt s-zb s-zb-dusun" data-tip="zb">
+    <p class="zb-slayt-ust">💭 DÜŞÜN VE CEVAPLA</p>
+    <p class="zb-slayt-metin">Kur'an'daki kıssalardan hangisi sana en çok ders veriyor? Neden?</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--turkuaz)">
@@ -622,10 +676,11 @@
       <li>Kevser suresi, üç ayetten oluşur ve Kur'an-ı Kerim'in en kısa suresidir. "Kevser" kelimesi bolluk, bereket, maddi ve manevi çokluk anlamına gelir.</li><li>Cahiliye Dönemi'nde Hz. Muhammed'in (sav) oğlu Kasım'ın küçük yaşta vefatı üzerine müşrikler onu "ebter" (nesli kesik) diyerek üzdüler.</li><li>Bunun üzerine Yüce Allah, Kevser suresini indirdi; Hz. Peygamber'in soyu kızı Hz. Fatıma'nın çocukları Hz. Hasan ve Hz.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-hayat" data-tip="zg">
-    <p class="zg-slayt-ust">🌍 GERÇEK HAYAT BAĞLANTISI</p>
-    <p class="zg-slayt-metin">Kur'an'daki kıssalar, günümüz insanına da sabır, dürüstlük, adalet gibi değerleri öğretir — bunları kendi hayatımızda uygulayabiliriz.</p>
+  <div class="sunum-slayt s-zb s-zb-aile" data-tip="zb">
+    <p class="zb-slayt-ust">👨‍👩‍👧 AİLEMLE YAPIYORUM</p>
+    <p class="zb-slayt-metin">Ailenle birlikte sevdiğiniz bir sureyi (örneğin Kevser veya Fatiha) Türkçe anlamıyla birlikte okuyup üzerine sohbet edin.</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--turkuaz)">
@@ -634,6 +689,16 @@
       <li>Hüseyin ile devam etmiştir.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zb s-zb-degerlendir" data-tip="zb">
+    <p class="zb-slayt-ust">✅ KENDİMİ DEĞERLENDİRİYORUM</p>
+    <ul class="zb-slayt-liste">
+      <li>☐ Kur'an-ı Kerim'in temel özelliklerini sayabilirim.</li>
+      <li>☐ Mekki ve Medeni ayet farkını açıklayabilirim.</li>
+      <li>☐ Kur'an'ın isimlerinden (Furkan, Nur, Şifa) örnek verebilirim.</li>
+      <li>☐ Kur'an okumaya özen gösteriyorum.</li>
+    </ul>
+  </div>
+
 
   <div class="sunum-slayt s-kavram" data-tip="kavram">
     <h3>🔑 Önemli Kavramlar (1/2)</h3>
@@ -703,10 +768,11 @@
     <p><b>Ayet</b>, Kur'an surelerini oluşturan harf, kelime veya cümlelerdir; <b>durak</b> denilen yuvarlak işaretlerle ayrılır. Mekke'de inen ayetlere <b>Mekki</b>, Medine'de inenlere <b>Medeni</b> ayet denir. <b>Sure</b>, ayetlerden oluşan bölümdür; ilk sure Fatiha, son sure Nâs'tır. En uzun sure Bakara (286 ayet), en kısa sure Kevser'dir (3 ayet). Kur'an-ı Kerim'de <b>114 sure</b>, <b>6236 ayet</b> vardır. <b>Cüz</b>, Kur'an'ın yirmi sayfadan oluşan her bir bölümüdür; toplam <b>30 cüz</b> vardır, başlangıcında <b>cüz gülü</b> bulunur.</p>
     <div class="aciklama"><b>Hafız</b>, Kur'an-ı Kerim'i baştan sona ezberleyen kişidir. <b>Hatim</b>, Kur'an-ı Kerim'i baştan sonuna kadar okumaktır.</div>
   </div>
-  <div class="zg-kutu zg-bilgi">
-    <p class="zg-baslik">💡 Bilgi Kutusu</p>
-    <p class="zg-metin">Kur'an-ı Kerim'in en uzun suresi Bakara (286 ayet), en kısa suresi ise Kevser'dir (3 ayet).</p>
+  <div class="zb-kutu zb-merak">
+    <p class="zb-baslik">🤔 Merak Ettin mi?</p>
+    <p class="zb-metin">Kur'an'ın en uzun suresi Bakara (286 ayet), en kısa suresi Kevser'dir (3 ayet).</p>
   </div>
+
 
 
   <div class="kutu-panel">
@@ -719,10 +785,16 @@
       <li><b>İnsanları düşünmeye ve aklını kullanmaya yöneltir</b> — Pek çok ayette "Ey akıl sahipleri!" diye seslenilir.</li>
     </ul>
   </div>
-  <div class="zg-kutu zg-merak">
-    <p class="zg-baslik">🤔 Merak Ettin mi?</p>
-    <p class="zg-metin">Kur'an'daki ayetlerin sırası neden iniş sırasına göre değil? Çünkü Cebrail'in bildirdiği şekilde, Peygamberimiz tarafından belirlenmiştir; bu ilahi bir düzenlemedir.</p>
+  <div class="zb-kutu zb-yanlis">
+    <p class="zb-baslik">❌ Yanlış Bilinenler</p>
+    <p class="zb-metin zb-yanlis-satir">❌ Bazıları Kur'an'daki ayetlerin iniş sırasına göre dizildiğini sanır.</p>
+    <p class="zb-metin zb-dogru-satir">✅ Kur'an'daki sure/ayet sıralaması iniş sırasına göre değil, Cebrail'in bildirdiği şekilde Peygamberimiz tarafından belirlenen ilahi bir düzenlemedir.</p>
   </div>
+  <div class="zb-kutu zb-ornek">
+    <p class="zb-baslik">🌍 Gerçek Hayattan Bir Örnek</p>
+    <p class="zb-metin">Kur'an kursunda bir öğrencinin hatim yapması (baştan sona okuması), Kur'an'la kurulan derin bir bağın somut göstergesidir.</p>
+  </div>
+
 
 
   <div class="kutu-panel">
@@ -735,10 +807,15 @@
       <li><b>Kıssa</b> — Geçmiş peygamberler ve kavimlerle ilgili ibret verici olaylar. "Andolsun ki, onların kıssalarında akıl sahipleri için ibret vardır..."</li>
     </ul>
   </div>
-  <div class="zg-kutu zg-soru">
-    <p class="zg-baslik">❓ Günün Sorusu</p>
-    <p class="zg-metin">Kur'an'da en çok hangi kıssayı merak ediyorsun?</p>
+  <div class="zb-kutu zb-dusun">
+    <p class="zb-baslik">💭 Düşün ve Cevapla</p>
+    <p class="zb-metin">Kur'an'daki kıssalardan hangisi sana en çok ders veriyor? Neden?</p>
   </div>
+  <div class="zb-kutu zb-aile">
+    <p class="zb-baslik">👨‍👩‍👧 Ailemle Yapıyorum</p>
+    <p class="zb-metin">Ailenle birlikte sevdiğiniz bir sureyi (örneğin Kevser veya Fatiha) Türkçe anlamıyla birlikte okuyup üzerine sohbet edin.</p>
+  </div>
+
 
 
   <div class="kutu-panel">
@@ -751,10 +828,16 @@
       <tr><td style="padding:6px;">İnne şânieke hüvel ebter</td><td style="padding:6px;">Asıl soyu gelmeyecek olan, sana karşı nefret duyandır.</td></tr>
     </table>
   </div>
-  <div class="zg-kutu zg-hayat">
-    <p class="zg-baslik">🌍 Gerçek Hayat Bağlantısı</p>
-    <p class="zg-metin">Kur'an'daki kıssalar, günümüz insanına da sabır, dürüstlük, adalet gibi değerleri öğretir — bunları kendi hayatımızda uygulayabiliriz.</p>
+  <div class="zb-kutu zb-degerlendir">
+    <p class="zb-baslik">✅ Kendimi Değerlendiriyorum</p>
+    <ul>
+      <li><input type="checkbox" id="deg_5-3_0" onchange="degKaydet('5-3')"><label for="deg_5-3_0">Kur'an-ı Kerim'in temel özelliklerini sayabilirim.</label></li>
+      <li><input type="checkbox" id="deg_5-3_1" onchange="degKaydet('5-3')"><label for="deg_5-3_1">Mekki ve Medeni ayet farkını açıklayabilirim.</label></li>
+      <li><input type="checkbox" id="deg_5-3_2" onchange="degKaydet('5-3')"><label for="deg_5-3_2">Kur'an'ın isimlerinden (Furkan, Nur, Şifa) örnek verebilirim.</label></li>
+      <li><input type="checkbox" id="deg_5-3_3" onchange="degKaydet('5-3')"><label for="deg_5-3_3">Kur'an okumaya özen gösteriyorum.</label></li>
+    </ul>
   </div>
+
 
 </section>
 
@@ -3201,6 +3284,27 @@ function ozelOnay(mesaj, callback){
   btnler[0].onclick = ()=>{ arka.remove(); callback(true); };
   btnler[1].onclick = ()=>{ arka.remove(); callback(false); };
 }
+
+
+// ===================== KENDIMI DEGERLENDIRIYORUM - CHECKBOX KAYDI =====================
+function degOku(uniteKimlik){
+  try{ return JSON.parse(localStorage.getItem('dkabDegerlendirme_'+uniteKimlik)) || {}; }catch(e){ return {}; }
+}
+function degKaydet(uniteKimlik){
+  const durum = {};
+  document.querySelectorAll('[id^="deg_'+uniteKimlik+'_"]').forEach(cb=>{ durum[cb.id] = cb.checked; });
+  try{ localStorage.setItem('dkabDegerlendirme_'+uniteKimlik, JSON.stringify(durum)); }catch(e){}
+}
+function degYukle(uniteKimlik){
+  const durum = degOku(uniteKimlik);
+  Object.keys(durum).forEach(id=>{
+    const cb = document.getElementById(id);
+    if(cb) cb.checked = durum[id];
+  });
+}
+document.addEventListener('DOMContentLoaded', function(){
+  if(typeof UNITE_KIMLIK !== 'undefined') degYukle(UNITE_KIMLIK);
+});
 
 </script>
 </body>

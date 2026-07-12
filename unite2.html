@@ -437,6 +437,51 @@
 .ozel-toast{ position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:#22333b; color:#fff; padding:14px 22px; border-radius:24px; box-shadow:0 6px 20px rgba(0,0,0,.3); z-index:1000; animation:ozelToastGir .3s ease; font-weight:bold; max-width:80vw; text-align:center; }
 @keyframes ozelToastGir{ from{opacity:0; transform:translateX(-50%) translateY(20px);} to{opacity:1; transform:translateX(-50%) translateY(0);} }
 
+
+/* ===================== 6 BOLUMLU ZENGINLESTIRME (Konu Ozeti) ===================== */
+.zb-kutu{ border-radius:12px; padding:16px 18px; margin:16px 0; box-shadow:0 3px 10px rgba(0,0,0,.08); }
+.zb-baslik{ font-weight:bold; font-size:1.05em; margin:0 0 8px; display:flex; align-items:center; gap:8px; }
+.zb-metin{ margin:0; line-height:1.55; font-size:.97em; }
+.zb-merak{ background:#f3ecfb; border-left:6px solid #7c3aed; }
+.zb-merak .zb-baslik{ color:#7c3aed; }
+.zb-yanlis{ background:#fff0f0; border-left:6px solid #d62828; }
+.zb-yanlis .zb-baslik{ color:#d62828; }
+.zb-yanlis .zb-yanlis-satir{ color:#a31515; margin:4px 0; }
+.zb-yanlis .zb-dogru-satir{ color:#2d6a4f; margin:4px 0; font-weight:bold; }
+.zb-ornek{ background:#eafaf1; border-left:6px solid #40916c; }
+.zb-ornek .zb-baslik{ color:#40916c; }
+.zb-dusun{ background:#fff4e6; border-left:6px solid #f4a261; }
+.zb-dusun .zb-baslik{ color:#c9740b; }
+.zb-aile{ background:#fdeef5; border-left:6px solid #d6336c; }
+.zb-aile .zb-baslik{ color:#d6336c; }
+.zb-degerlendir{ background:#eaf2ff; border-left:6px solid #2a6f97; }
+.zb-degerlendir .zb-baslik{ color:#2a6f97; }
+.zb-degerlendir ul{ list-style:none; padding:0; margin:0; }
+.zb-degerlendir li{ display:flex; align-items:flex-start; gap:8px; margin:8px 0; font-size:.95em; line-height:1.4; }
+.zb-degerlendir input[type=checkbox]{ width:18px; height:18px; margin-top:2px; flex-shrink:0; accent-color:#2a6f97; cursor:pointer; }
+.zb-degerlendir label{ cursor:pointer; }
+
+/* ===================== 6 BOLUMLU ZENGINLESTIRME (Sunum slaytlari) ===================== */
+.s-zb{ color:#22333b; }
+.s-zb-merak{ background:#f3ecfb; }
+.s-zb-yanlis{ background:#fff0f0; }
+.s-zb-ornek{ background:#eafaf1; }
+.s-zb-dusun{ background:#fff4e6; }
+.s-zb-aile{ background:#fdeef5; }
+.s-zb-degerlendir{ background:#eaf2ff; }
+.zb-slayt-ust{ font-weight:bold; letter-spacing:1.5px; font-size:.95em; margin-bottom:14px; }
+.s-zb-merak .zb-slayt-ust{ color:#7c3aed; }
+.s-zb-yanlis .zb-slayt-ust{ color:#d62828; }
+.s-zb-ornek .zb-slayt-ust{ color:#40916c; }
+.s-zb-dusun .zb-slayt-ust{ color:#c9740b; }
+.s-zb-aile .zb-slayt-ust{ color:#d6336c; }
+.s-zb-degerlendir .zb-slayt-ust{ color:#2a6f97; }
+.zb-slayt-metin{ font-size:1.1em; line-height:1.5; max-width:640px; }
+.zb-slayt-yanlis{ color:#a31515; font-size:1em; margin:6px 0; }
+.zb-slayt-dogru{ color:#2d6a4f; font-size:1em; margin:6px 0; font-weight:bold; }
+.zb-slayt-liste{ list-style:none; padding:0; margin:0; text-align:left; max-width:600px; }
+.zb-slayt-liste li{ font-size:1em; margin:8px 0; }
+
 </style>
 </head>
 <body>
@@ -579,10 +624,11 @@
       <li>Namaz Çeşitleri:</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-bilgi" data-tip="zg">
-    <p class="zg-slayt-ust">💡 BİLGİ KUTUSU</p>
-    <p class="zg-slayt-metin">Namazın farzları toplam 12 tanedir; 6'sı namaza başlamadan önceki hazırlık şartları, 6'sı namaz içindeki rükünlerdir.</p>
+  <div class="sunum-slayt s-zb s-zb-merak" data-tip="zb">
+    <p class="zb-slayt-ust">🤔 MERAK ETTİN Mİ?</p>
+    <p class="zb-slayt-metin">Cemaatle kılınan namaz, tek başına kılınan namazdan 27 kat daha faziletlidir.</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
@@ -591,6 +637,12 @@
       <li>Namazın Hazırlık Şartları (6): Hadesten taharet (abdest/gusül almak), necasetten taharet (beden/elbise/yer temizliği), setriavret (vücudun örtülmesi), vakit, istikbalikıble (kıbleye yönelmek), niyet.</li><li>Abdest: Niyet → Eller → Ağız (3 kez) → Burun (3 kez) → Yüz (3 kez) → Sağ-sol kol dirseklerle → Baş mesh → Kulak içi-arkası mesh → Boyun mesh → Sağ-sol ayak topuklarla.</li><li>Teyemmüm: Suyun bulunmadığı/kullanılamadığı durumlarda toprakla alınan abdesttir.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zb s-zb-yanlis" data-tip="zb">
+    <p class="zb-slayt-ust">❌ YANLIŞ BİLİNENLER</p>
+    <p class="zb-slayt-yanlis">❌ Bazıları namazı sadece bir "zorunluluk" olarak görür.</p>
+    <p class="zb-slayt-dogru">✅ Namaz, Kur'an'a göre insanı hayâsızlıktan ve kötülükten alıkoyan, kişiye disiplin ve huzur kazandıran bir ibadettir.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
     <h3>📌 Namazın Kılınışı (2/3)</h3>
@@ -598,10 +650,11 @@
       <li>Gusül: Vücutta kuru yer kalmayacak şekilde tüm bedenin yıkanmasıdır (boy abdesti).</li><li>Namazın Kılınış Şartları (6): İftitah tekbiri ("Allahüekber" ile başlama), kıyam (ayakta durma), kıraat (Kur'an okuma), rükû (eğilme), secde (yere kapanma), ka'de-i ahire/son oturuş (Tahiyyat'ı okuyacak kadar oturma).</li><li>Cemaatle Namaz: Cuma ve bayram namazlarının camide cemaatle kılınması gerekir. Hz.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-merak" data-tip="zg">
-    <p class="zg-slayt-ust">🤔 MERAK ETTİN Mİ?</p>
-    <p class="zg-slayt-metin">Neden namazda kıbleye döneriz? Bu, tüm dünyadaki Müslümanların aynı yöne yönelerek birlik ve beraberlik duygusunu güçlendirmesi içindir.</p>
+  <div class="sunum-slayt s-zb s-zb-ornek" data-tip="zb">
+    <p class="zb-slayt-ust">🌍 GERÇEK HAYATTAN BİR ÖRNEK</p>
+    <p class="zb-slayt-metin">Namaz vakitlerine göre günlük programını düzenleyen bir öğrenci, zamanını daha planlı kullanmayı da öğrenmiş olur.</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
@@ -610,10 +663,11 @@
       <li>Muhammed (sav): "Cemaatle kılınan namaz, tek başına kılınan namazdan yirmi yedi kat daha faziletlidir." Cuma namazında imam minbere çıkıp hutbe okur.</li><li>Cenaze namazı rükû ve secde yapılmadan sadece kıyamda durularak kılınır.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-soru" data-tip="zg">
-    <p class="zg-slayt-ust">❓ GÜNÜN SORUSU</p>
-    <p class="zg-slayt-metin">Bugünkü namazlarından hangisini daha huzurlu kıldın? Neden?</p>
+  <div class="sunum-slayt s-zb s-zb-dusun" data-tip="zb">
+    <p class="zb-slayt-ust">💭 DÜŞÜN VE CEVAPLA</p>
+    <p class="zb-slayt-metin">Namazın hangi yönü (disiplin, huzur, toplu ibadet vb.) sence en çok fayda sağlıyor?</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--kirmizi)">
@@ -622,6 +676,11 @@
       <li>Namaz, insanın kulluk bilincini canlı tutar, onu kötülüklerden uzaklaştırır. Abdest sayesinde insan hem manevi hem maddi olarak temizlenir.</li><li>Kur'an-ı Kerim'de: "... namaz, hayâsızlıktan ve kötülükten alıkoyar..." buyrulur. Hz.</li><li>Peygamber'e göre secde, kulun Allah'a en yakın olduğu andır.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zb s-zb-aile" data-tip="zb">
+    <p class="zb-slayt-ust">👨‍👩‍👧 AİLEMLE YAPIYORUM</p>
+    <p class="zb-slayt-metin">Ailenle birlikte bir vakit namazı cemaatle kılmayı deneyin ve sonrasında hissettiklerinizi paylaşın.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--kirmizi)">
     <h3>📌 Namaz İbadetinin İnsana Kazandırdıkları (2/2)</h3>
@@ -629,10 +688,16 @@
       <li>Camilerde bir araya gelen Müslümanlar arasında ırk, renk, dil ayrımı olmadan kardeşlik bilinci gelişir; yardımlaşma ve dayanışma artar.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-hayat" data-tip="zg">
-    <p class="zg-slayt-ust">🌍 GERÇEK HAYAT BAĞLANTISI</p>
-    <p class="zg-slayt-metin">Namaz vakitleri, günü düzenli bölümlere ayırır; bu da zaman yönetimi ve disiplin kazanmamıza yardımcı olur.</p>
+  <div class="sunum-slayt s-zb s-zb-degerlendir" data-tip="zb">
+    <p class="zb-slayt-ust">✅ KENDİMİ DEĞERLENDİRİYORUM</p>
+    <ul class="zb-slayt-liste">
+      <li>☐ Namazın farzlarını sayabilirim.</li>
+      <li>☐ Abdestin namaz için neden gerekli olduğunu açıklayabilirim.</li>
+      <li>☐ Namaz vakitlerini biliyorum.</li>
+      <li>☐ Namazımı vaktinde kılmaya özen gösteriyorum.</li>
+    </ul>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--turkuaz)">
@@ -713,10 +778,11 @@
       <li><b>Nafile (sünnet) namazlar</b> — Farz namazların öncesi/sonrasında kılınanlar, teravih, teheccüt.</li>
     </ul>
   </div>
-  <div class="zg-kutu zg-bilgi">
-    <p class="zg-baslik">💡 Bilgi Kutusu</p>
-    <p class="zg-metin">Namazın farzları toplam 12 tanedir; 6'sı namaza başlamadan önceki hazırlık şartları, 6'sı namaz içindeki rükünlerdir.</p>
+  <div class="zb-kutu zb-merak">
+    <p class="zb-baslik">🤔 Merak Ettin mi?</p>
+    <p class="zb-metin">Cemaatle kılınan namaz, tek başına kılınan namazdan 27 kat daha faziletlidir.</p>
   </div>
+
 
 
   <div class="kutu-panel">
@@ -728,10 +794,16 @@
     <div class="aciklama"><b>Rekât</b>, namazın kıyam, kıraat, rükû ve iki secdeden ibaret her bir bölümüdür. Rükûda 3 kez "Sübhane Rabbiye'l-azîm", secdede 3 kez "Sübhâne Rabbiye'l-a'lâ" denir.</div>
     <p><b>Cemaatle Namaz:</b> Cuma ve bayram namazlarının camide <b>cemaat</b>le kılınması gerekir. Hz. Muhammed (sav): "Cemaatle kılınan namaz, tek başına kılınan namazdan yirmi yedi kat daha faziletlidir." Cuma namazında imam <b>minber</b>e çıkıp <b>hutbe</b> okur. <b>Cenaze namazı</b> rükû ve secde yapılmadan sadece kıyamda durularak kılınır.</p>
   </div>
-  <div class="zg-kutu zg-merak">
-    <p class="zg-baslik">🤔 Merak Ettin mi?</p>
-    <p class="zg-metin">Neden namazda kıbleye döneriz? Bu, tüm dünyadaki Müslümanların aynı yöne yönelerek birlik ve beraberlik duygusunu güçlendirmesi içindir.</p>
+  <div class="zb-kutu zb-yanlis">
+    <p class="zb-baslik">❌ Yanlış Bilinenler</p>
+    <p class="zb-metin zb-yanlis-satir">❌ Bazıları namazı sadece bir "zorunluluk" olarak görür.</p>
+    <p class="zb-metin zb-dogru-satir">✅ Namaz, Kur'an'a göre insanı hayâsızlıktan ve kötülükten alıkoyan, kişiye disiplin ve huzur kazandıran bir ibadettir.</p>
   </div>
+  <div class="zb-kutu zb-ornek">
+    <p class="zb-baslik">🌍 Gerçek Hayattan Bir Örnek</p>
+    <p class="zb-metin">Namaz vakitlerine göre günlük programını düzenleyen bir öğrenci, zamanını daha planlı kullanmayı da öğrenmiş olur.</p>
+  </div>
+
 
 
   <div class="kutu-panel">
@@ -739,10 +811,15 @@
     <p>Namaz, insanın kulluk bilincini canlı tutar, onu kötülüklerden uzaklaştırır. Abdest sayesinde insan hem manevi hem maddi olarak temizlenir. Kur'an-ı Kerim'de: "... namaz, hayâsızlıktan ve kötülükten alıkoyar..." buyrulur. Hz. Peygamber'e göre <b>secde</b>, kulun Allah'a en yakın olduğu andır.</p>
     <p>Camilerde bir araya gelen Müslümanlar arasında ırk, renk, dil ayrımı olmadan kardeşlik bilinci gelişir; yardımlaşma ve dayanışma artar.</p>
   </div>
-  <div class="zg-kutu zg-soru">
-    <p class="zg-baslik">❓ Günün Sorusu</p>
-    <p class="zg-metin">Bugünkü namazlarından hangisini daha huzurlu kıldın? Neden?</p>
+  <div class="zb-kutu zb-dusun">
+    <p class="zb-baslik">💭 Düşün ve Cevapla</p>
+    <p class="zb-metin">Namazın hangi yönü (disiplin, huzur, toplu ibadet vb.) sence en çok fayda sağlıyor?</p>
   </div>
+  <div class="zb-kutu zb-aile">
+    <p class="zb-baslik">👨‍👩‍👧 Ailemle Yapıyorum</p>
+    <p class="zb-metin">Ailenle birlikte bir vakit namazı cemaatle kılmayı deneyin ve sonrasında hissettiklerinizi paylaşın.</p>
+  </div>
+
 
 
   <div class="kutu-panel">
@@ -756,10 +833,16 @@
       <tr><td style="padding:6px;">Eşhedü ellâ ilâhe illallâh ve eşhedü enne Muhammeden abdühû ve rasûlüh</td><td style="padding:6px;">Tanıklık ederim ki Allah'tan başka ilah yoktur. Yine tanıklık ederim ki Muhammed O'nun kulu ve elçisidir.</td></tr>
     </table>
   </div>
-  <div class="zg-kutu zg-hayat">
-    <p class="zg-baslik">🌍 Gerçek Hayat Bağlantısı</p>
-    <p class="zg-metin">Namaz vakitleri, günü düzenli bölümlere ayırır; bu da zaman yönetimi ve disiplin kazanmamıza yardımcı olur.</p>
+  <div class="zb-kutu zb-degerlendir">
+    <p class="zb-baslik">✅ Kendimi Değerlendiriyorum</p>
+    <ul>
+      <li><input type="checkbox" id="deg_5-2_0" onchange="degKaydet('5-2')"><label for="deg_5-2_0">Namazın farzlarını sayabilirim.</label></li>
+      <li><input type="checkbox" id="deg_5-2_1" onchange="degKaydet('5-2')"><label for="deg_5-2_1">Abdestin namaz için neden gerekli olduğunu açıklayabilirim.</label></li>
+      <li><input type="checkbox" id="deg_5-2_2" onchange="degKaydet('5-2')"><label for="deg_5-2_2">Namaz vakitlerini biliyorum.</label></li>
+      <li><input type="checkbox" id="deg_5-2_3" onchange="degKaydet('5-2')"><label for="deg_5-2_3">Namazımı vaktinde kılmaya özen gösteriyorum.</label></li>
+    </ul>
   </div>
+
 
 </section>
 
@@ -3205,6 +3288,27 @@ function ozelOnay(mesaj, callback){
   btnler[0].onclick = ()=>{ arka.remove(); callback(true); };
   btnler[1].onclick = ()=>{ arka.remove(); callback(false); };
 }
+
+
+// ===================== KENDIMI DEGERLENDIRIYORUM - CHECKBOX KAYDI =====================
+function degOku(uniteKimlik){
+  try{ return JSON.parse(localStorage.getItem('dkabDegerlendirme_'+uniteKimlik)) || {}; }catch(e){ return {}; }
+}
+function degKaydet(uniteKimlik){
+  const durum = {};
+  document.querySelectorAll('[id^="deg_'+uniteKimlik+'_"]').forEach(cb=>{ durum[cb.id] = cb.checked; });
+  try{ localStorage.setItem('dkabDegerlendirme_'+uniteKimlik, JSON.stringify(durum)); }catch(e){}
+}
+function degYukle(uniteKimlik){
+  const durum = degOku(uniteKimlik);
+  Object.keys(durum).forEach(id=>{
+    const cb = document.getElementById(id);
+    if(cb) cb.checked = durum[id];
+  });
+}
+document.addEventListener('DOMContentLoaded', function(){
+  if(typeof UNITE_KIMLIK !== 'undefined') degYukle(UNITE_KIMLIK);
+});
 
 </script>
 </body>

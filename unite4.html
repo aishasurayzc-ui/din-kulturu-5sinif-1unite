@@ -437,6 +437,51 @@
 .ozel-toast{ position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:#22333b; color:#fff; padding:14px 22px; border-radius:24px; box-shadow:0 6px 20px rgba(0,0,0,.3); z-index:1000; animation:ozelToastGir .3s ease; font-weight:bold; max-width:80vw; text-align:center; }
 @keyframes ozelToastGir{ from{opacity:0; transform:translateX(-50%) translateY(20px);} to{opacity:1; transform:translateX(-50%) translateY(0);} }
 
+
+/* ===================== 6 BOLUMLU ZENGINLESTIRME (Konu Ozeti) ===================== */
+.zb-kutu{ border-radius:12px; padding:16px 18px; margin:16px 0; box-shadow:0 3px 10px rgba(0,0,0,.08); }
+.zb-baslik{ font-weight:bold; font-size:1.05em; margin:0 0 8px; display:flex; align-items:center; gap:8px; }
+.zb-metin{ margin:0; line-height:1.55; font-size:.97em; }
+.zb-merak{ background:#f3ecfb; border-left:6px solid #7c3aed; }
+.zb-merak .zb-baslik{ color:#7c3aed; }
+.zb-yanlis{ background:#fff0f0; border-left:6px solid #d62828; }
+.zb-yanlis .zb-baslik{ color:#d62828; }
+.zb-yanlis .zb-yanlis-satir{ color:#a31515; margin:4px 0; }
+.zb-yanlis .zb-dogru-satir{ color:#2d6a4f; margin:4px 0; font-weight:bold; }
+.zb-ornek{ background:#eafaf1; border-left:6px solid #40916c; }
+.zb-ornek .zb-baslik{ color:#40916c; }
+.zb-dusun{ background:#fff4e6; border-left:6px solid #f4a261; }
+.zb-dusun .zb-baslik{ color:#c9740b; }
+.zb-aile{ background:#fdeef5; border-left:6px solid #d6336c; }
+.zb-aile .zb-baslik{ color:#d6336c; }
+.zb-degerlendir{ background:#eaf2ff; border-left:6px solid #2a6f97; }
+.zb-degerlendir .zb-baslik{ color:#2a6f97; }
+.zb-degerlendir ul{ list-style:none; padding:0; margin:0; }
+.zb-degerlendir li{ display:flex; align-items:flex-start; gap:8px; margin:8px 0; font-size:.95em; line-height:1.4; }
+.zb-degerlendir input[type=checkbox]{ width:18px; height:18px; margin-top:2px; flex-shrink:0; accent-color:#2a6f97; cursor:pointer; }
+.zb-degerlendir label{ cursor:pointer; }
+
+/* ===================== 6 BOLUMLU ZENGINLESTIRME (Sunum slaytlari) ===================== */
+.s-zb{ color:#22333b; }
+.s-zb-merak{ background:#f3ecfb; }
+.s-zb-yanlis{ background:#fff0f0; }
+.s-zb-ornek{ background:#eafaf1; }
+.s-zb-dusun{ background:#fff4e6; }
+.s-zb-aile{ background:#fdeef5; }
+.s-zb-degerlendir{ background:#eaf2ff; }
+.zb-slayt-ust{ font-weight:bold; letter-spacing:1.5px; font-size:.95em; margin-bottom:14px; }
+.s-zb-merak .zb-slayt-ust{ color:#7c3aed; }
+.s-zb-yanlis .zb-slayt-ust{ color:#d62828; }
+.s-zb-ornek .zb-slayt-ust{ color:#40916c; }
+.s-zb-dusun .zb-slayt-ust{ color:#c9740b; }
+.s-zb-aile .zb-slayt-ust{ color:#d6336c; }
+.s-zb-degerlendir .zb-slayt-ust{ color:#2a6f97; }
+.zb-slayt-metin{ font-size:1.1em; line-height:1.5; max-width:640px; }
+.zb-slayt-yanlis{ color:#a31515; font-size:1em; margin:6px 0; }
+.zb-slayt-dogru{ color:#2d6a4f; font-size:1em; margin:6px 0; font-weight:bold; }
+.zb-slayt-liste{ list-style:none; padding:0; margin:0; text-align:left; max-width:600px; }
+.zb-slayt-liste li{ font-size:1em; margin:8px 0; }
+
 </style>
 </head>
 <body>
@@ -579,10 +624,11 @@
       <li>Dürüstlük, adalet, yardımseverlik, merhamet gibi ahlaki ilkeleri önce kendi hayatlarında uygulamışlardır.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-bilgi" data-tip="zg">
-    <p class="zg-slayt-ust">💡 BİLGİ KUTUSU</p>
-    <p class="zg-slayt-metin">Ülülazm peygamberler (Hz. Nuh, Hz. İbrahim, Hz. Musa, Hz. İsa, Hz. Muhammed), zorluklara karşı en büyük sabrı gösteren 5 peygamberdir.</p>
+  <div class="sunum-slayt s-zb s-zb-merak" data-tip="zb">
+    <p class="zb-slayt-ust">🤔 MERAK ETTİN Mİ?</p>
+    <p class="zb-slayt-metin">Ülülazm peygamberler (Hz. Nuh, Hz. İbrahim, Hz. Musa, Hz. İsa, Hz. Muhammed), zorluklara karşı en büyük sabrı gösteren 5 peygamberdir.</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
@@ -591,10 +637,12 @@
       <li>Hz. Nuh: Kur'an'da ismi en çok geçen peygamberlerden biridir, adına bir sure vardır. Putlara tapan kavmini tevhide davet etmiştir.</li><li>Kavmi onu dinlememiş, Allah (cc) ona bir gemi yapmasını emretmiştir.</li><li>Tufan başlayınca iman edenler ve her hayvandan birer çift gemiye binmiş, sular çekilince gemi Cudi Dağı'na oturmuştur. Hz.</li><li>Nuh, insanlığın ikinci atası kabul edilir.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-merak" data-tip="zg">
-    <p class="zg-slayt-ust">🤔 MERAK ETTİN Mİ?</p>
-    <p class="zg-slayt-metin">Hz. Nuh'un gemisi tufandan sonra nereye oturmuştur? Kur'an'a göre Cudi Dağı'na.</p>
+  <div class="sunum-slayt s-zb s-zb-yanlis" data-tip="zb">
+    <p class="zb-slayt-ust">❌ YANLIŞ BİLİNENLER</p>
+    <p class="zb-slayt-yanlis">❌ Bazıları peygamber kıssalarının sadece geçmişte kalmış hikayeler olduğunu düşünür.</p>
+    <p class="zb-slayt-dogru">✅ Peygamber kıssaları, sabır, dürüstlük, adalet gibi evrensel dersler içerir ve günümüz insanına da yol gösterir.</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
@@ -603,6 +651,11 @@
       <li>Hz. İbrahim: Putlara ve yıldızlara tapan Babil halkını tevhide davet etmiştir.</li><li>En büyük put dışındaki tüm putları kırmış, bunun üzerine ateşe atılmış ancak Allah'ın "Ey ateş!</li><li>İbrahim'e karşı serin ve esenlik ol." emriyle kurtulmuştur.</li><li>Hanif bir kimsedir (doğruya ve hakka bağlanan, Allah'ın birliğine iman eden). Oğlu Hz.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zb s-zb-ornek" data-tip="zb">
+    <p class="zb-slayt-ust">🌍 GERÇEK HAYATTAN BİR ÖRNEK</p>
+    <p class="zb-slayt-metin">Hz. Nuh'un yıllarca sabırla kavmini doğru yola davet etmesi gibi, bir öğrencinin de zor bir konuyu anlayana kadar sabırla çalışması aynı sabır erdemini yansıtır.</p>
+  </div>
+
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
     <h3>📌 Kur'an-ı Kerim'den Öğütler: Peygamber Kıssaları (3/4)</h3>
@@ -610,10 +663,11 @@
       <li>İsmail'le birlikte Kâbe'yi yeniden inşa etmiştir.</li><li>Hz. Musa: Allah'ın kendisine Tevrat'ı indirdiği, İsrailoğullarına gönderilen peygamberdir.</li><li>Zalim kral Firavun'un zulmünden kaçarken Allah'ın emriyle asasını vurmuş, Kızıldeniz ikiye ayrılmış; Firavun ve ordusu boğulmuştur.</li><li>Kardeşi Hz. Harun da kendisine peygamber olarak yardım etmiştir.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-soru" data-tip="zg">
-    <p class="zg-slayt-ust">❓ GÜNÜN SORUSU</p>
-    <p class="zg-slayt-metin">Peygamber kıssalarından hangi ders senin hayatına en çok dokunuyor?</p>
+  <div class="sunum-slayt s-zb s-zb-dusun" data-tip="zb">
+    <p class="zb-slayt-ust">💭 DÜŞÜN VE CEVAPLA</p>
+    <p class="zb-slayt-metin">Hz. İbrahim'in putlara karşı çıkma cesareti, günümüzde doğru bildiğimiz bir şeyi savunurken bize nasıl örnek olabilir?</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--mavi)">
@@ -622,10 +676,11 @@
       <li>Hz. İsa: Hz. Meryem'in oğludur, İsrailoğullarına gönderilmiştir. Allah kendisine İncil'i indirmiştir. Yaratılışı Hz.</li><li>Adem'in yaratılışına benzetilir. Kendisinden sonra Hz. Muhammed'in (sav) peygamber olacağını müjdelemiştir.</li><li>Peygamber kıssalarında ortak olarak tevhide davet, mucizeler, iyilik-kötülük ve sabırla mücadele konu edilir; geçmiş toplumların hataları hatırlatılır.</li>
     </ul>
   </div>
-  <div class="sunum-slayt s-zg s-zg-hayat" data-tip="zg">
-    <p class="zg-slayt-ust">🌍 GERÇEK HAYAT BAĞLANTISI</p>
-    <p class="zg-slayt-metin">Hz. İbrahim'in doğru bildiğinden vazgeçmemesi gibi, biz de zor durumlarda doğru olanı savunma cesaretini gösterebiliriz.</p>
+  <div class="sunum-slayt s-zb s-zb-aile" data-tip="zb">
+    <p class="zb-slayt-ust">👨‍👩‍👧 AİLEMLE YAPIYORUM</p>
+    <p class="zb-slayt-metin">Ailenle birlikte bildiğiniz bir peygamber kıssasını anlatın ve kıssadan çıkan dersi birlikte tartışın.</p>
   </div>
+
 
 
   <div class="sunum-slayt s-icerik" data-tip="icerik" style="--vurgu:var(--kirmizi)">
@@ -634,6 +689,16 @@
       <li>Hz. Muhammed'in (sav) ailesi, Mekke'nin yerli halkı olan Kureyş kabilesine mensuptur.</li><li>Kureyş kabilesi, Mekke'de Kâbe'nin bakımını üstlenmiş, ziyaretçilere yemek ve su dağıtımı gibi hizmetler vermiş, bu nedenle diğer kabileler tarafından büyük saygı görmüştür.</li>
     </ul>
   </div>
+  <div class="sunum-slayt s-zb s-zb-degerlendir" data-tip="zb">
+    <p class="zb-slayt-ust">✅ KENDİMİ DEĞERLENDİRİYORUM</p>
+    <ul class="zb-slayt-liste">
+      <li>☐ Ülülazm peygamberleri sayabilirim.</li>
+      <li>☐ Hz. Nuh kıssasının ana hatlarını anlatabilirim.</li>
+      <li>☐ Hz. İbrahim kıssasının ana hatlarını anlatabilirim.</li>
+      <li>☐ Kıssalardan çıkan dersleri hayatıma uygulamaya çalışıyorum.</li>
+    </ul>
+  </div>
+
 
   <div class="sunum-slayt s-kavram" data-tip="kavram">
     <h3>🔑 Önemli Kavramlar (1/2)</h3>
@@ -701,10 +766,16 @@
     <p>Peygamberlerin görevleri sadece mesaj bildirmek değildir: aldıkları emirleri açıklamış, nasıl uygulanacağını göstermiş, iyi ve doğru olanı anlatmış, insanları kötülüklerden sakındırmış ve davranışlarıyla insanlara <b>örnek</b> olmuşlardır. Dürüstlük, adalet, yardımseverlik, merhamet gibi ahlaki ilkeleri önce kendi hayatlarında uygulamışlardır.</p>
     <div class="aciklama"><b>Davet:</b> Sözlükte çağırmak, seslenmek anlamına gelir. İslam'a ve İslam esaslarının uygulanmasına çağırmak demektir.</div>
   </div>
-  <div class="zg-kutu zg-bilgi">
-    <p class="zg-baslik">💡 Bilgi Kutusu</p>
-    <p class="zg-metin">Ülülazm peygamberler (Hz. Nuh, Hz. İbrahim, Hz. Musa, Hz. İsa, Hz. Muhammed), zorluklara karşı en büyük sabrı gösteren 5 peygamberdir.</p>
+  <div class="zb-kutu zb-merak">
+    <p class="zb-baslik">🤔 Merak Ettin mi?</p>
+    <p class="zb-metin">Ülülazm peygamberler (Hz. Nuh, Hz. İbrahim, Hz. Musa, Hz. İsa, Hz. Muhammed), zorluklara karşı en büyük sabrı gösteren 5 peygamberdir.</p>
   </div>
+  <div class="zb-kutu zb-yanlis">
+    <p class="zb-baslik">❌ Yanlış Bilinenler</p>
+    <p class="zb-metin zb-yanlis-satir">❌ Bazıları peygamber kıssalarının sadece geçmişte kalmış hikayeler olduğunu düşünür.</p>
+    <p class="zb-metin zb-dogru-satir">✅ Peygamber kıssaları, sabır, dürüstlük, adalet gibi evrensel dersler içerir ve günümüz insanına da yol gösterir.</p>
+  </div>
+
 
 
   <div class="kutu-panel">
@@ -717,14 +788,15 @@
     <div class="aciklama"><b>Kavim:</b> Aralarında dil, kültür ve gelenek ortaklığı bulunan, aynı soydan gelen insan topluluğu. <b>Ümmet:</b> Bir peygamberin anlattığı dine inananlardan oluşan topluluk.</div>
     <p>Peygamber kıssalarında ortak olarak <b>tevhide davet</b>, <b>mucizeler</b>, iyilik-kötülük ve <b>sabırla mücadele</b> konu edilir; geçmiş toplumların hataları hatırlatılır.</p>
   </div>
-  <div class="zg-kutu zg-merak">
-    <p class="zg-baslik">🤔 Merak Ettin mi?</p>
-    <p class="zg-metin">Hz. Nuh'un gemisi tufandan sonra nereye oturmuştur? Kur'an'a göre Cudi Dağı'na.</p>
+  <div class="zb-kutu zb-ornek">
+    <p class="zb-baslik">🌍 Gerçek Hayattan Bir Örnek</p>
+    <p class="zb-metin">Hz. Nuh'un yıllarca sabırla kavmini doğru yola davet etmesi gibi, bir öğrencinin de zor bir konuyu anlayana kadar sabırla çalışması aynı sabır erdemini yansıtır.</p>
   </div>
-  <div class="zg-kutu zg-soru">
-    <p class="zg-baslik">❓ Günün Sorusu</p>
-    <p class="zg-metin">Peygamber kıssalarından hangi ders senin hayatına en çok dokunuyor?</p>
+  <div class="zb-kutu zb-dusun">
+    <p class="zb-baslik">💭 Düşün ve Cevapla</p>
+    <p class="zb-metin">Hz. İbrahim'in putlara karşı çıkma cesareti, günümüzde doğru bildiğimiz bir şeyi savunurken bize nasıl örnek olabilir?</p>
   </div>
+
 
 
   <div class="kutu-panel">
@@ -739,10 +811,20 @@
     </table>
     <div class="aciklama"><b>Kabile:</b> Aralarında kan bağı olan insanların oluşturduğu geniş aile.</div>
   </div>
-  <div class="zg-kutu zg-hayat">
-    <p class="zg-baslik">🌍 Gerçek Hayat Bağlantısı</p>
-    <p class="zg-metin">Hz. İbrahim'in doğru bildiğinden vazgeçmemesi gibi, biz de zor durumlarda doğru olanı savunma cesaretini gösterebiliriz.</p>
+  <div class="zb-kutu zb-aile">
+    <p class="zb-baslik">👨‍👩‍👧 Ailemle Yapıyorum</p>
+    <p class="zb-metin">Ailenle birlikte bildiğiniz bir peygamber kıssasını anlatın ve kıssadan çıkan dersi birlikte tartışın.</p>
   </div>
+  <div class="zb-kutu zb-degerlendir">
+    <p class="zb-baslik">✅ Kendimi Değerlendiriyorum</p>
+    <ul>
+      <li><input type="checkbox" id="deg_5-4_0" onchange="degKaydet('5-4')"><label for="deg_5-4_0">Ülülazm peygamberleri sayabilirim.</label></li>
+      <li><input type="checkbox" id="deg_5-4_1" onchange="degKaydet('5-4')"><label for="deg_5-4_1">Hz. Nuh kıssasının ana hatlarını anlatabilirim.</label></li>
+      <li><input type="checkbox" id="deg_5-4_2" onchange="degKaydet('5-4')"><label for="deg_5-4_2">Hz. İbrahim kıssasının ana hatlarını anlatabilirim.</label></li>
+      <li><input type="checkbox" id="deg_5-4_3" onchange="degKaydet('5-4')"><label for="deg_5-4_3">Kıssalardan çıkan dersleri hayatıma uygulamaya çalışıyorum.</label></li>
+    </ul>
+  </div>
+
 
 </section>
 
@@ -3189,6 +3271,27 @@ function ozelOnay(mesaj, callback){
   btnler[0].onclick = ()=>{ arka.remove(); callback(true); };
   btnler[1].onclick = ()=>{ arka.remove(); callback(false); };
 }
+
+
+// ===================== KENDIMI DEGERLENDIRIYORUM - CHECKBOX KAYDI =====================
+function degOku(uniteKimlik){
+  try{ return JSON.parse(localStorage.getItem('dkabDegerlendirme_'+uniteKimlik)) || {}; }catch(e){ return {}; }
+}
+function degKaydet(uniteKimlik){
+  const durum = {};
+  document.querySelectorAll('[id^="deg_'+uniteKimlik+'_"]').forEach(cb=>{ durum[cb.id] = cb.checked; });
+  try{ localStorage.setItem('dkabDegerlendirme_'+uniteKimlik, JSON.stringify(durum)); }catch(e){}
+}
+function degYukle(uniteKimlik){
+  const durum = degOku(uniteKimlik);
+  Object.keys(durum).forEach(id=>{
+    const cb = document.getElementById(id);
+    if(cb) cb.checked = durum[id];
+  });
+}
+document.addEventListener('DOMContentLoaded', function(){
+  if(typeof UNITE_KIMLIK !== 'undefined') degYukle(UNITE_KIMLIK);
+});
 
 </script>
 </body>
